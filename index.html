@@ -40,6 +40,17 @@
         <input type="hidden" name="id">
         <div class="type-switch"><button type="button" class="active" data-type="film">电影</button><button type="button" data-type="album">专辑</button></div>
         <input type="hidden" name="type" value="film">
+        <div class="image-field">
+          <span id="image-field-label">剧照（可选）</span>
+          <div class="image-picker">
+            <div class="image-preview" id="image-preview"><span>暂无图片</span></div>
+            <div class="image-picker-actions">
+              <label class="image-upload">选择图片<input id="entry-image" type="file" accept="image/png,image/jpeg,image/webp"></label>
+              <button type="button" id="remove-image">移除图片</button>
+              <small>会自动压缩，并随备份一起导出。</small>
+            </div>
+          </div>
+        </div>
         <div class="form-grid">
           <label class="wide">作品名<input required name="title" placeholder="中文名或最熟悉的名字"></label>
           <label>原名 / 英文名<input name="subtitle"></label>

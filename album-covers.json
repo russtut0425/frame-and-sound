@@ -1,68 +1,105 @@
 {
-  "generatedAt": "2026-09-02T14:32:18.222Z",
-  "source": "Apple iTunes Search API",
+  "generatedAt": "2026-09-02T14:45:08.449Z",
+  "source": [
+    "Apple iTunes Search API",
+    "MusicBrainz / Cover Art Archive"
+  ],
   "total": 183,
-  "matched": 93,
-  "unmatched": 90,
+  "matched": 142,
+  "unmatched": 41,
   "covers": {
     "album|100种生活|卢广仲": "covers/10072.jpg",
     "album|15|方大同": "covers/10136.jpg",
     "album|2014 forest hills drive|j. cole": "covers/10009.jpg",
     "album|ambient 1: music for airports|brian eno": "covers/10149.jpg",
+    "album|art angels|grimes": "covers/10144.jpg",
+    "album|arular|m.i.a.": "covers/10165.jpg",
     "album|beauty behind the madness|the weeknd": "covers/10046.jpg",
+    "album|blonde|frank ocean": "covers/10012.jpg",
+    "album|broke with expensive taste|azealia banks": "covers/10161.jpg",
     "album|brothers & sisters|soil & “pimp” sessions": "covers/10035.jpg",
     "album|bttb|坂本龙一": "covers/10016.jpg",
+    "album|call me if you get lost|tyler, the creator": "covers/10023.jpg",
+    "album|channel orange|frank ocean": "covers/10010.jpg",
+    "album|cherry bomb|tyler, the creator": "covers/10013.jpg",
     "album|chinese football|chinese football": "covers/10075.jpg",
     "album|chromakopia|tyler, the creator": "covers/10092.jpg",
     "album|confield|autechre": "covers/10103.jpg",
     "album|cosmogramma|flying lotus": "covers/10157.jpg",
     "album|ctrl|sza": "covers/10021.jpg",
     "album|currents|tame impala": "covers/10066.jpg",
+    "album|dangerous|michael jackson": "covers/10054.jpg",
     "album|death stranding (songs from the video game)|various artists": "covers/10130.jpg",
     "album|discovery|daft punk": "covers/2.jpg",
     "album|donda|kanye west": "covers/10005.jpg",
     "album|dots and loops|stereolab": "covers/10153.jpg",
+    "album|endless|frank ocean": "covers/10050.jpg",
+    "album|endtroducing.....|dj shadow": "covers/10056.jpg",
     "album|essex honey|blood orange": "covers/10106.jpg",
+    "album|flower boy|tyler, the creator": "covers/10017.jpg",
     "album|fragile|yes": "covers/10127.jpg",
+    "album|freudian|daniel caesar": "covers/10114.jpg",
     "album|funeral|arcade fire": "covers/10089.jpg",
+    "album|gelato|boylife": "covers/10109.jpg",
     "album|ghosts from the past|bang gang": "covers/10178.jpg",
     "album|good kid, m.a.a.d city|kendrick lamar": "covers/10022.jpg",
     "album|grace|jeff buckley": "covers/10154.jpg",
     "album|graduation|kanye west": "covers/10047.jpg",
+    "album|i lay down my life for you|jpegmafia": "covers/10084.jpg",
     "album|i'm ok|陶喆": "covers/10055.jpg",
+    "album|igor|tyler, the creator": "covers/10007.jpg",
     "album|illmatic|nas": "covers/10001.jpg",
     "album|in rainbows|radiohead": "covers/10048.jpg",
     "album|in the court of the crimson king|king crimson": "covers/10094.jpg",
     "album|invincible|michael jackson": "covers/10051.jpg",
     "album|jesus is king|kanye west": "covers/10003.jpg",
+    "album|kala|m.i.a.": "covers/10159.jpg",
     "album|kid a|radiohead": "covers/10061.jpg",
     "album|lahai|sampha": "covers/10042.jpg",
+    "album|life's a struggle|宋岳庭": "covers/10167.jpg",
     "album|long season|fishmans": "covers/10045.jpg",
     "album|luv(sic) hexalogy|nujabes & shing02": "covers/10014.jpg",
     "album|madvillainy|madvillain": "covers/10027.jpg",
+    "album|melt my eyez see your future|denzel curry": "covers/10057.jpg",
     "album|metaphorical music|nujabes": "covers/10018.jpg",
     "album|michael|michael jackson": "covers/10052.jpg",
+    "album|modal soul|nujabes": "covers/10019.jpg",
     "album|music for nine post cards|吉村弘": "covers/10148.jpg",
     "album|my beautiful dark twisted fantasy|kanye west": "covers/10002.jpg",
+    "album|nefelibata 2|曾柯淳": "covers/10043.jpg",
+    "album|never enough|daniel caesar": "covers/10026.jpg",
+    "album|nostalgia, ultra|frank ocean": "covers/10020.jpg",
     "album|null & void|ground-zero": "covers/10179.jpg",
     "album|opus|坂本龙一": "covers/10087.jpg",
     "album|origin of symmetry|muse": "covers/10135.jpg",
+    "album|original pirate material|the streets": "covers/10170.jpg",
     "album|our waning love|谢明谚": "covers/10123.jpg",
+    "album|pilgrim's paradise|daniel caesar": "covers/10060.jpg",
+    "album|playback|nieve": "covers/10032.jpg",
     "album|playing the piano|坂本龙一": "covers/10069.jpg",
     "album|portable audio science|honeydip": "covers/10091.jpg",
+    "album|process|sampha": "covers/10030.jpg",
     "album|purple rain|prince and the revolution": "covers/10067.jpg",
     "album|random access memories|daft punk": "covers/10065.jpg",
     "album|re:re:re:|惘闻": "covers/10077.jpg",
     "album|re|café tacvba": "covers/10176.jpg",
+    "album|red burns|standing on the corner": "covers/10151.jpg",
     "album|rumours|fleetwood mac": "covers/10152.jpg",
+    "album|samurai|lupe fiasco": "covers/10105.jpg",
+    "album|scaring the hoes|jpegmafia & danny brown": "covers/10025.jpg",
+    "album|section.80|kendrick lamar": "covers/10059.jpg",
     "album|since i left you|the avalanches": "covers/10142.jpg",
+    "album|sometimes i might be introvert|little simz": "covers/10011.jpg",
     "album|son of spergy|daniel caesar": "covers/10116.jpg",
     "album|songs in the key of life|stevie wonder": "covers/10058.jpg",
     "album|stankonia|outkast": "covers/10150.jpg",
     "album|starship syncopation|cory wong, metropole orkest & jules buckley": "covers/10104.jpg",
     "album|taxi driver|bernard herrmann": "covers/10134.jpg",
+    "album|the age of adz|sufjan stevens": "covers/6.jpg",
+    "album|the dark side of the moon|pink floyd": "covers/10015.jpg",
     "album|the epic|kamasi washington": "covers/10132.jpg",
     "album|the life of pablo|kanye west": "covers/10004.jpg",
+    "album|the lonny breaux collection|frank ocean": "covers/10082.jpg",
     "album|the miseducation of lauryn hill|lauryn hill": "covers/10033.jpg",
     "album|the now now and never|what is your name?": "covers/10088.jpg",
     "album|three|坂本龙一": "covers/10037.jpg",
@@ -72,21 +109,30 @@
     "album|to pimp a butterfly|kendrick lamar": "covers/10008.jpg",
     "album|velocity: design: comfort.|sweet trip": "covers/10036.jpg",
     "album|voodoo|d'angelo": "covers/10160.jpg",
-    "album|vultures 1|¥$ (kanye west & ty dolla $ign)": "covers/10085.jpg",
     "album|vultures 2|¥$ (kanye west & ty dolla $ign)": "covers/10086.jpg",
     "album|we will always love you|the avalanches": "covers/4.jpg",
+    "album|winter sweet|蛋堡": "covers/10038.jpg",
     "album|wish you were here|pink floyd": "covers/10115.jpg",
     "album|wolfgang amadeus phoenix|phoenix": "covers/10155.jpg",
+    "album|yeezus|kanye west": "covers/10006.jpg",
     "album|yellow magic orchestra|yellow magic orchestra": "covers/10031.jpg",
+    "album|young fresh chin ii|夏之禹": "covers/10029.jpg",
+    "album|zuu|denzel curry": "covers/10156.jpg",
     "album|この道の向こうに|巨勢典子": "covers/10090.jpg",
+    "album|一定是爆炸么？|小老虎 & soulspeak": "covers/10168.jpg",
     "album|万能青年旅店|万能青年旅店": "covers/10095.jpg",
     "album|乐典：侗族（叁）|乐典 & 黔东南侗族原住民": "covers/10126.jpg",
+    "album|你所不知道的杜振熙之内部整修|蛋堡": "covers/10034.jpg",
     "album|冀西南林路行|万能青年旅店": "covers/10093.jpg",
     "album|卡拉ok.台北.我|张雨生": "covers/10131.jpg",
+    "album|口是心非|张雨生": "covers/10145.jpg",
     "album|只爱陌生人|王菲": "covers/10071.jpg",
+    "album|垃圾场|劣": "covers/10137.jpg",
+    "album|头7|dj小女孩": "covers/10102.jpg",
     "album|宋岳庭的羽毛|宋岳庭": "covers/10117.jpg",
     "album|巴蜀文艺复兴：第二章|施鑫文月": "covers/10028.jpg",
     "album|幽默与笑话|卡力老虎 & jesse margiela": "covers/10113.jpg",
+    "album|我不要别的历史|海朋森": "covers/10140.jpg",
     "album|敬！李双泽 唱自己的歌|群星": "covers/10124.jpg",
     "album|新长征路上的摇滚|崔健": "covers/10121.jpg",
     "album|月下世界|天鹅与花朵": "covers/10128.jpg",
@@ -94,10 +140,16 @@
     "album|橙月|方大同": "covers/10073.jpg",
     "album|浮躁|王菲": "covers/10175.jpg",
     "album|渋夜旅|渋さ知らズ": "covers/10143.jpg",
+    "album|潜潜話|ずっと真夜中でいいのに。": "covers/10041.jpg",
+    "album|灰太阳|施鑫文月": "covers/10099.jpg",
     "album|看不见的城市|惘闻": "covers/10081.jpg",
+    "album|节奏的主人|dj小女孩": "covers/10111.jpg",
+    "album|节奏的奴隶 ii|dj小女孩": "covers/10097.jpg",
+    "album|节奏的奴隶 iii|dj小女孩": "covers/10098.jpg",
     "album|菊花夜行军|交工乐队": "covers/10110.jpg",
     "album|蝴蝶的罪恶感|po8": "covers/10049.jpg",
-    "album|非想非非想|王蓉": "covers/10147.jpg"
+    "album|非想非非想|王蓉": "covers/10147.jpg",
+    "album|墨田区depression|未来電波基地": "covers/10064.jpg"
   },
   "metadata": {
     "album|discovery|daft punk": {
@@ -114,22 +166,6 @@
         "country": "US",
         "score": 1,
         "source": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fd/4a/77/fd4a77db-0ebc-d043-41a2-f32fa1bb0fb4/dj.qrikkdwj.jpg/300x300bb.jpg"
-      }
-    },
-    "album|we will always love you|the avalanches": {
-      "requested": {
-        "title": "We Will Always Love You",
-        "creator": "The Avalanches",
-        "releaseYear": 2020
-      },
-      "matched": {
-        "title": "We Will Always Love You (feat. Blood Orange) - Single",
-        "creator": "The Avalanches",
-        "releaseYear": 2020,
-        "collectionId": 1498158066,
-        "country": "US",
-        "score": 0.958,
-        "source": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/ce/9c/77/ce9c778a-3e12-f839-4948-b16631d9570c/20UMGIM07854.rgb.jpg/300x300bb.jpg"
       }
     },
     "album|illmatic|nas": {
@@ -322,22 +358,6 @@
         "country": "US",
         "score": 1,
         "source": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/36/86/ec/3686ec99-dec4-0a01-8b74-2d8a9a0263a7/12UMGIM52988.rgb.jpg/300x300bb.jpg"
-      }
-    },
-    "album|madvillainy|madvillain": {
-      "requested": {
-        "title": "Madvillainy",
-        "creator": "Madvillain",
-        "releaseYear": 2004
-      },
-      "matched": {
-        "title": "Madvillainy Instrumentals",
-        "creator": "Madvillain",
-        "releaseYear": 2004,
-        "collectionId": 41655332,
-        "country": "US",
-        "score": 0.958,
-        "source": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/18/b4/9a/18b49ad5-6407-7169-27f4-d1c8bcb5504b/s05.nqwebndj.jpg/300x300bb.jpg"
       }
     },
     "album|巴蜀文艺复兴：第二章|施鑫文月": {
@@ -628,22 +648,6 @@
         "source": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e8/43/5f/e8435ffa-b6b9-b171-40ab-4ff3959ab661/886443919266.jpg/300x300bb.jpg"
       }
     },
-    "album|currents|tame impala": {
-      "requested": {
-        "title": "Currents",
-        "creator": "Tame Impala",
-        "releaseYear": 2015
-      },
-      "matched": {
-        "title": "Currents B-Sides & Remixes - EP",
-        "creator": "Tame Impala",
-        "releaseYear": 2017,
-        "collectionId": 1440875696,
-        "country": "US",
-        "score": 0.919,
-        "source": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/64/48/5c/64485cc9-968c-68cc-764e-9a7c71733def/00602567155454.rgb.jpg/300x300bb.jpg"
-      }
-    },
     "album|purple rain|prince and the revolution": {
       "requested": {
         "title": "Purple Rain",
@@ -786,22 +790,6 @@
         "country": "CN",
         "score": 0.883,
         "source": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/82/f0/89/82f0898a-3135-ea68-3bed-fa938ed86cfd/193017002195.jpg/300x300bb.jpg"
-      }
-    },
-    "album|vultures 1|¥$ (kanye west & ty dolla $ign)": {
-      "requested": {
-        "title": "VULTURES 1",
-        "creator": "¥$ (Kanye West & Ty Dolla $ign)",
-        "releaseYear": 2024
-      },
-      "matched": {
-        "title": "VULTURES 2",
-        "creator": "¥$, Kanye West & Ty Dolla $ign",
-        "releaseYear": 2024,
-        "collectionId": 1761882317,
-        "country": "US",
-        "score": 0.93,
-        "source": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/bf/db/25/bfdb25f8-1518-d6d9-32ad-053cc9f87d88/357949.jpg/300x300bb.jpg"
       }
     },
     "album|vultures 2|¥$ (kanye west & ty dolla $ign)": {
@@ -1188,22 +1176,6 @@
         "source": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a8/f3/11/a8f311a3-8692-f705-0b79-2f584fcdcd42/24UM1IM31922.rgb.jpg/300x300bb.jpg"
       }
     },
-    "album|death stranding (songs from the video game)|various artists": {
-      "requested": {
-        "title": "Death Stranding (Songs from the Video Game)",
-        "creator": "Various Artists",
-        "releaseYear": 2019
-      },
-      "matched": {
-        "title": "Death Stranding 2 (Songs from the Video Game)",
-        "creator": "Various Artists",
-        "releaseYear": 2025,
-        "collectionId": 1838538062,
-        "country": "US",
-        "score": 0.907,
-        "source": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/69/50/af/6950af51-ddbb-3f96-485f-cd4203e33533/196873366203.jpg/300x300bb.jpg"
-      }
-    },
     "album|卡拉ok.台北.我|张雨生": {
       "requested": {
         "title": "卡拉OK.台北.我",
@@ -1572,6 +1544,70 @@
         "source": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/82/62/2f/82622f6a-d153-38ed-f2dc-1346f9c558b9/5690738135829_cover.jpg/300x300bb.jpg"
       }
     },
+    "album|we will always love you|the avalanches": {
+      "requested": {
+        "title": "We Will Always Love You",
+        "creator": "The Avalanches",
+        "releaseYear": 2020
+      },
+      "matched": {
+        "title": "We Will Always Love You",
+        "creator": "The Avalanches",
+        "releaseYear": 2020,
+        "releaseGroupId": "ad5a6f0f-3444-4ebd-8a98-ce6dfb1bfabe",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/ad5a6f0f-3444-4ebd-8a98-ce6dfb1bfabe/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|madvillainy|madvillain": {
+      "requested": {
+        "title": "Madvillainy",
+        "creator": "Madvillain",
+        "releaseYear": 2004
+      },
+      "matched": {
+        "title": "Madvillainy",
+        "creator": "Madvillain",
+        "releaseYear": 2002,
+        "releaseGroupId": "ab570ccb-b06b-3746-8147-4903163ba895",
+        "score": 0.961,
+        "source": "https://coverartarchive.org/release-group/ab570ccb-b06b-3746-8147-4903163ba895/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|currents|tame impala": {
+      "requested": {
+        "title": "Currents",
+        "creator": "Tame Impala",
+        "releaseYear": 2015
+      },
+      "matched": {
+        "title": "Currents",
+        "creator": "Tame Impala",
+        "releaseYear": 2015,
+        "releaseGroupId": "08aa7a6c-3e43-4459-87b2-e47faf3a088a",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/08aa7a6c-3e43-4459-87b2-e47faf3a088a/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|death stranding (songs from the video game)|various artists": {
+      "requested": {
+        "title": "Death Stranding (Songs from the Video Game)",
+        "creator": "Various Artists",
+        "releaseYear": 2019
+      },
+      "matched": {
+        "title": "Death Stranding: Songs From the Video Game",
+        "creator": "Various Artists",
+        "releaseYear": 2020,
+        "releaseGroupId": "df974831-40f9-428a-a19b-25beb3006db4",
+        "score": 0.988,
+        "source": "https://coverartarchive.org/release-group/df974831-40f9-428a-a19b-25beb3006db4/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
     "album|null & void|ground-zero": {
       "requested": {
         "title": "Null & Void",
@@ -1579,13 +1615,813 @@
         "releaseYear": 1995
       },
       "matched": {
-        "title": "Null & Void - EP",
-        "creator": "GUM! BEA!",
+        "title": "Null & Void",
+        "creator": "GROUND-ZERO",
+        "releaseYear": 1995,
+        "releaseGroupId": "b679f88e-21c0-37d4-bfb0-54686e3f356a",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/b679f88e-21c0-37d4-bfb0-54686e3f356a/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|the age of adz|sufjan stevens": {
+      "requested": {
+        "title": "The Age of Adz",
+        "creator": "Sufjan Stevens",
+        "releaseYear": 2010
+      },
+      "matched": {
+        "title": "The Age of Adz",
+        "creator": "Sufjan Stevens",
+        "releaseYear": 2010,
+        "releaseGroupId": "705027f6-370d-4e0a-931f-3960fe07a8ba",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/705027f6-370d-4e0a-931f-3960fe07a8ba/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|yeezus|kanye west": {
+      "requested": {
+        "title": "Yeezus",
+        "creator": "Kanye West",
+        "releaseYear": 2013
+      },
+      "matched": {
+        "title": "lorde yeezus",
+        "creator": "wait what",
+        "releaseYear": 2015,
+        "releaseGroupId": "1945bd6a-9465-4f49-8749-fb26945962a1",
+        "score": 0.775,
+        "source": "https://coverartarchive.org/release-group/1945bd6a-9465-4f49-8749-fb26945962a1/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|igor|tyler, the creator": {
+      "requested": {
+        "title": "IGOR",
+        "creator": "Tyler, the Creator",
+        "releaseYear": 2019
+      },
+      "matched": {
+        "title": "IGOR",
+        "creator": "Tyler, The Creator",
+        "releaseYear": 2019,
+        "releaseGroupId": "0f1b9e07-b38b-4bba-9794-55e0924d7177",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/0f1b9e07-b38b-4bba-9794-55e0924d7177/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|channel orange|frank ocean": {
+      "requested": {
+        "title": "channel ORANGE",
+        "creator": "Frank Ocean",
+        "releaseYear": 2012
+      },
+      "matched": {
+        "title": "channel ORANGE",
+        "creator": "Frank Ocean",
+        "releaseYear": 2012,
+        "releaseGroupId": "f8f4167d-897c-4b25-a171-638374d1dfa4",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/f8f4167d-897c-4b25-a171-638374d1dfa4/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|sometimes i might be introvert|little simz": {
+      "requested": {
+        "title": "Sometimes I Might Be Introvert",
+        "creator": "Little Simz",
+        "releaseYear": 2021
+      },
+      "matched": {
+        "title": "Sometimes I Might Be Introvert",
+        "creator": "Little Simz",
+        "releaseYear": 2021,
+        "releaseGroupId": "e95de3f4-84db-4d24-8d06-fd970576a6ef",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/e95de3f4-84db-4d24-8d06-fd970576a6ef/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|blonde|frank ocean": {
+      "requested": {
+        "title": "Blonde",
+        "creator": "Frank Ocean",
+        "releaseYear": 2016
+      },
+      "matched": {
+        "title": "Blonde",
+        "creator": "Frank Ocean",
+        "releaseYear": 2016,
+        "releaseGroupId": "0da340a0-6ad7-4fc2-a272-6f94393a7831",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/0da340a0-6ad7-4fc2-a272-6f94393a7831/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|cherry bomb|tyler, the creator": {
+      "requested": {
+        "title": "Cherry Bomb",
+        "creator": "Tyler, the Creator",
+        "releaseYear": 2015
+      },
+      "matched": {
+        "title": "Cherry Bomb",
+        "creator": "Tyler, The Creator",
+        "releaseYear": 2015,
+        "releaseGroupId": "1ea9701e-f93e-4d88-9eda-16d01c155ff6",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/1ea9701e-f93e-4d88-9eda-16d01c155ff6/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|the dark side of the moon|pink floyd": {
+      "requested": {
+        "title": "The Dark Side of the Moon",
+        "creator": "Pink Floyd",
+        "releaseYear": 1973
+      },
+      "matched": {
+        "title": "The Dark Side of the Moon",
+        "creator": "Pink Floyd",
+        "releaseYear": 1973,
+        "releaseGroupId": "f5093c06-23e3-404f-aeaa-40f72885ee3a",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/f5093c06-23e3-404f-aeaa-40f72885ee3a/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|flower boy|tyler, the creator": {
+      "requested": {
+        "title": "Flower Boy",
+        "creator": "Tyler, the Creator",
+        "releaseYear": 2017
+      },
+      "matched": {
+        "title": "Flower Boy",
+        "creator": "Tyler, The Creator",
+        "releaseYear": 2017,
+        "releaseGroupId": "e248e931-c26c-4c94-aba2-2f89ce583901",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/e248e931-c26c-4c94-aba2-2f89ce583901/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|modal soul|nujabes": {
+      "requested": {
+        "title": "Modal Soul",
+        "creator": "Nujabes",
+        "releaseYear": 2005
+      },
+      "matched": {
+        "title": "Modal Soul",
+        "creator": "Nujabes",
+        "releaseYear": 2005,
+        "releaseGroupId": "bd62a5df-6643-3aef-b129-9d4e6e296022",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/bd62a5df-6643-3aef-b129-9d4e6e296022/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|nostalgia, ultra|frank ocean": {
+      "requested": {
+        "title": "nostalgia, ULTRA",
+        "creator": "Frank Ocean",
+        "releaseYear": 2011
+      },
+      "matched": {
+        "title": "nostalgia,ULTRA.",
+        "creator": "Frank Ocean",
+        "releaseYear": 2011,
+        "releaseGroupId": "c2dde373-d47b-45a9-8b7e-0a9f5f011ed4",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/c2dde373-d47b-45a9-8b7e-0a9f5f011ed4/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|call me if you get lost|tyler, the creator": {
+      "requested": {
+        "title": "Call Me If You Get Lost",
+        "creator": "Tyler, the Creator",
+        "releaseYear": 2021
+      },
+      "matched": {
+        "title": "CALL ME IF YOU GET LOST",
+        "creator": "Tyler, The Creator",
+        "releaseYear": 2021,
+        "releaseGroupId": "c65de046-7a48-4269-b4e5-4db0ed328f47",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/c65de046-7a48-4269-b4e5-4db0ed328f47/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|scaring the hoes|jpegmafia & danny brown": {
+      "requested": {
+        "title": "SCARING THE HOES",
+        "creator": "JPEGMAFIA & Danny Brown",
+        "releaseYear": 2023
+      },
+      "matched": {
+        "title": "SCARING THE HOES",
+        "creator": "JPEGMAFIA & Danny Brown",
+        "releaseYear": 2023,
+        "releaseGroupId": "6bb871f4-08ec-4a70-9fb3-c1c2b481e090",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/6bb871f4-08ec-4a70-9fb3-c1c2b481e090/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|never enough|daniel caesar": {
+      "requested": {
+        "title": "NEVER ENOUGH",
+        "creator": "Daniel Caesar",
+        "releaseYear": 2023
+      },
+      "matched": {
+        "title": "NEVER ENOUGH",
+        "creator": "Daniel Caesar",
+        "releaseYear": 2022,
+        "releaseGroupId": "65f5ca68-6dcd-4cc9-8f3c-09d9aaa56bfb",
+        "score": 0.988,
+        "source": "https://coverartarchive.org/release-group/65f5ca68-6dcd-4cc9-8f3c-09d9aaa56bfb/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|young fresh chin ii|夏之禹": {
+      "requested": {
+        "title": "Young Fresh Chin II",
+        "creator": "夏之禹",
+        "releaseYear": 2023
+      },
+      "matched": {
+        "title": "Young Fresh Chin II",
+        "creator": "夏之禹",
+        "releaseYear": 2023,
+        "releaseGroupId": "8d6cb4c9-8a71-49ec-8935-060051f9b1d9",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/8d6cb4c9-8a71-49ec-8935-060051f9b1d9/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|process|sampha": {
+      "requested": {
+        "title": "Process",
+        "creator": "Sampha",
+        "releaseYear": 2017
+      },
+      "matched": {
+        "title": "Process",
+        "creator": "Sampha",
+        "releaseYear": 2017,
+        "releaseGroupId": "9dde8e62-7159-415f-9a54-74f170e2a4aa",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/9dde8e62-7159-415f-9a54-74f170e2a4aa/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|playback|nieve": {
+      "requested": {
+        "title": "Playback",
+        "creator": "Nieve",
+        "releaseYear": 2010
+      },
+      "matched": {
+        "title": "Playback",
+        "creator": "Nieve",
+        "releaseYear": 2011,
+        "releaseGroupId": "6cb533ec-1be3-4716-b750-8bed69312b6b",
+        "score": 0.988,
+        "source": "https://coverartarchive.org/release-group/6cb533ec-1be3-4716-b750-8bed69312b6b/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|你所不知道的杜振熙之内部整修|蛋堡": {
+      "requested": {
+        "title": "你所不知道的杜振熙之内部整修",
+        "creator": "蛋堡",
+        "releaseYear": 2013
+      },
+      "matched": {
+        "title": "你所不知道的杜振熙之内部整修",
+        "creator": "蛋堡",
+        "releaseYear": 2013,
+        "releaseGroupId": "f1bf800c-8948-4113-bec2-fa0be2dcae58",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/f1bf800c-8948-4113-bec2-fa0be2dcae58/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|winter sweet|蛋堡": {
+      "requested": {
+        "title": "Winter Sweet",
+        "creator": "蛋堡",
+        "releaseYear": 2009
+      },
+      "matched": {
+        "title": "Winter Sweet",
+        "creator": "蛋堡",
+        "releaseYear": 2009,
+        "releaseGroupId": "e6e030f0-07a7-429f-82e8-4ea22bea4ce4",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/e6e030f0-07a7-429f-82e8-4ea22bea4ce4/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|潜潜話|ずっと真夜中でいいのに。": {
+      "requested": {
+        "title": "潜潜話",
+        "creator": "ずっと真夜中でいいのに。",
+        "releaseYear": 2019
+      },
+      "matched": {
+        "title": "潜潜話",
+        "creator": "ずっと真夜中でいいのに。",
+        "releaseYear": 2019,
+        "releaseGroupId": "d2d39dbf-c69e-4c87-b005-b77dde88f1f4",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/d2d39dbf-c69e-4c87-b005-b77dde88f1f4/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|nefelibata 2|曾柯淳": {
+      "requested": {
+        "title": "Nefelibata 2",
+        "creator": "曾柯淳",
+        "releaseYear": 2023
+      },
+      "matched": {
+        "title": "Nefelibata 2",
+        "creator": "曾柯淳",
+        "releaseYear": 2023,
+        "releaseGroupId": "588ef137-2013-4854-ac79-ca23d42c5981",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/588ef137-2013-4854-ac79-ca23d42c5981/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|endless|frank ocean": {
+      "requested": {
+        "title": "Endless",
+        "creator": "Frank Ocean",
+        "releaseYear": 2016
+      },
+      "matched": {
+        "title": "Endless",
+        "creator": "Frank Ocean",
+        "releaseYear": 2016,
+        "releaseGroupId": "b69366e3-8145-405e-9220-c0a575f23474",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/b69366e3-8145-405e-9220-c0a575f23474/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|dangerous|michael jackson": {
+      "requested": {
+        "title": "Dangerous",
+        "creator": "Michael Jackson",
+        "releaseYear": 1991
+      },
+      "matched": {
+        "title": "Dangerous",
+        "creator": "Michael Jackson",
+        "releaseYear": 1991,
+        "releaseGroupId": "d6b52521-0dfa-390f-970f-790174c22752",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/d6b52521-0dfa-390f-970f-790174c22752/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|endtroducing.....|dj shadow": {
+      "requested": {
+        "title": "Endtroducing.....",
+        "creator": "DJ Shadow",
+        "releaseYear": 1996
+      },
+      "matched": {
+        "title": "Endtroducing.....",
+        "creator": "DJ Shadow",
+        "releaseYear": 1996,
+        "releaseGroupId": "4b2186f5-ff00-3227-ae11-783ba93e1089",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/4b2186f5-ff00-3227-ae11-783ba93e1089/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|melt my eyez see your future|denzel curry": {
+      "requested": {
+        "title": "Melt My Eyez See Your Future",
+        "creator": "Denzel Curry",
+        "releaseYear": 2022
+      },
+      "matched": {
+        "title": "Melt My Eyez See Your Future",
+        "creator": "Denzel Curry",
+        "releaseYear": 2022,
+        "releaseGroupId": "299a1b9f-7cdd-46da-a5ea-77571ce04009",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/299a1b9f-7cdd-46da-a5ea-77571ce04009/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|section.80|kendrick lamar": {
+      "requested": {
+        "title": "Section.80",
+        "creator": "Kendrick Lamar",
+        "releaseYear": 2011
+      },
+      "matched": {
+        "title": "Section.80",
+        "creator": "Kendrick Lamar",
+        "releaseYear": 2011,
+        "releaseGroupId": "ceccd668-a928-4041-a3c3-99a5ce880de9",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/ceccd668-a928-4041-a3c3-99a5ce880de9/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|pilgrim's paradise|daniel caesar": {
+      "requested": {
+        "title": "Pilgrim's Paradise",
+        "creator": "Daniel Caesar",
+        "releaseYear": 2015
+      },
+      "matched": {
+        "title": "Pilgrim’s Paradise",
+        "creator": "Daniel Caesar",
+        "releaseYear": 2015,
+        "releaseGroupId": "916bebe7-6c89-45a3-b92c-3fc06f827fd5",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/916bebe7-6c89-45a3-b92c-3fc06f827fd5/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|墨田区depression|未来電波基地": {
+      "requested": {
+        "title": "墨田区DEPRESSION",
+        "creator": "未来電波基地",
+        "releaseYear": 2023
+      },
+      "matched": {
+        "title": "墨田区DEPRESSION",
+        "creator": "未来電波基地",
+        "releaseYear": 2023,
+        "releaseGroupId": "8f959fa8-eb00-4922-8a78-1daafb1c2fd3",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/8f959fa8-eb00-4922-8a78-1daafb1c2fd3/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|the lonny breaux collection|frank ocean": {
+      "requested": {
+        "title": "The Lonny Breaux Collection",
+        "creator": "Frank Ocean",
+        "releaseYear": 2011
+      },
+      "matched": {
+        "title": "The Lonny Breaux Collection",
+        "creator": "Frank Ocean",
+        "releaseYear": 2010,
+        "releaseGroupId": "143eb007-3c7f-4bf7-ae20-f1e3f8269035",
+        "score": 0.988,
+        "source": "https://coverartarchive.org/release-group/143eb007-3c7f-4bf7-ae20-f1e3f8269035/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|i lay down my life for you|jpegmafia": {
+      "requested": {
+        "title": "I LAY DOWN MY LIFE FOR YOU",
+        "creator": "JPEGMAFIA",
+        "releaseYear": 2024
+      },
+      "matched": {
+        "title": "I LAY DOWN MY LIFE FOR YOU",
+        "creator": "JPEGMAFIA",
         "releaseYear": 2024,
-        "collectionId": 1780751607,
-        "country": "US",
-        "score": 0.745,
-        "source": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/36/d2/93/36d2936b-ce44-e22e-1540-da86aac433b1/5063642888974_cover.jpg/300x300bb.jpg"
+        "releaseGroupId": "1e9e8f2b-febc-4c81-b067-77e595b5d5ba",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/1e9e8f2b-febc-4c81-b067-77e595b5d5ba/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|节奏的奴隶 ii|dj小女孩": {
+      "requested": {
+        "title": "节奏的奴隶 II",
+        "creator": "DJ小女孩",
+        "releaseYear": 2024
+      },
+      "matched": {
+        "title": "节奏的奴隶 II",
+        "creator": "DJ小女孩",
+        "releaseYear": 2024,
+        "releaseGroupId": "85971281-b2cf-4ea7-a27c-300e316abc80",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/85971281-b2cf-4ea7-a27c-300e316abc80/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|节奏的奴隶 iii|dj小女孩": {
+      "requested": {
+        "title": "节奏的奴隶 III",
+        "creator": "DJ小女孩",
+        "releaseYear": 2024
+      },
+      "matched": {
+        "title": "节奏的奴隶 III",
+        "creator": "DJ小女孩",
+        "releaseYear": 2024,
+        "releaseGroupId": "c542b9b2-abca-4742-9fe1-323f27641f05",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/c542b9b2-abca-4742-9fe1-323f27641f05/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|灰太阳|施鑫文月": {
+      "requested": {
+        "title": "灰太阳",
+        "creator": "施鑫文月",
+        "releaseYear": 2025
+      },
+      "matched": {
+        "title": "灰太阳",
+        "creator": "施鑫文月",
+        "releaseYear": 2025,
+        "releaseGroupId": "d0c8ced6-1c87-45ea-bd29-ec8214fca4d9",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/d0c8ced6-1c87-45ea-bd29-ec8214fca4d9/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|头7|dj小女孩": {
+      "requested": {
+        "title": "头7",
+        "creator": "DJ小女孩",
+        "releaseYear": 2025
+      },
+      "matched": {
+        "title": "头7",
+        "creator": "DJ小女孩",
+        "releaseYear": 2025,
+        "releaseGroupId": "a9165812-5155-4941-9eaa-eab779ee140f",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/a9165812-5155-4941-9eaa-eab779ee140f/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|samurai|lupe fiasco": {
+      "requested": {
+        "title": "Samurai",
+        "creator": "Lupe Fiasco",
+        "releaseYear": 2024
+      },
+      "matched": {
+        "title": "Samurai",
+        "creator": "Lupe Fiasco",
+        "releaseYear": 2024,
+        "releaseGroupId": "461fb938-6f99-4554-89e7-5f84ef699b78",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/461fb938-6f99-4554-89e7-5f84ef699b78/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|gelato|boylife": {
+      "requested": {
+        "title": "gelato",
+        "creator": "boylife",
+        "releaseYear": 2021
+      },
+      "matched": {
+        "title": "gelato",
+        "creator": "boylife",
+        "releaseYear": 2021,
+        "releaseGroupId": "e2038dda-8426-4c46-a38a-454e4228a104",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/e2038dda-8426-4c46-a38a-454e4228a104/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|节奏的主人|dj小女孩": {
+      "requested": {
+        "title": "节奏的主人",
+        "creator": "DJ小女孩",
+        "releaseYear": 2025
+      },
+      "matched": {
+        "title": "节奏的主人",
+        "creator": "DJ小女孩",
+        "releaseYear": 2025,
+        "releaseGroupId": "b00da235-3c4b-4b30-a35f-908110ea5b88",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/b00da235-3c4b-4b30-a35f-908110ea5b88/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|freudian|daniel caesar": {
+      "requested": {
+        "title": "Freudian",
+        "creator": "Daniel Caesar",
+        "releaseYear": 2017
+      },
+      "matched": {
+        "title": "Freudian",
+        "creator": "Daniel Caesar",
+        "releaseYear": 2017,
+        "releaseGroupId": "ba660007-8e88-4301-ba89-5574d06d29cc",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/ba660007-8e88-4301-ba89-5574d06d29cc/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|垃圾场|劣": {
+      "requested": {
+        "title": "垃圾场",
+        "creator": "劣",
+        "releaseYear": 2026
+      },
+      "matched": {
+        "title": "垃圾场",
+        "creator": "劣",
+        "releaseYear": 2026,
+        "releaseGroupId": "2542bc77-57b3-4996-bdfd-73c741cbe58d",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/2542bc77-57b3-4996-bdfd-73c741cbe58d/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|我不要别的历史|海朋森": {
+      "requested": {
+        "title": "我不要别的历史",
+        "creator": "海朋森",
+        "releaseYear": 2015
+      },
+      "matched": {
+        "title": "我不要别的历史",
+        "creator": "海朋森",
+        "releaseYear": 2015,
+        "releaseGroupId": "5ff57c82-30d4-4952-a44c-f2b5e502e1ef",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/5ff57c82-30d4-4952-a44c-f2b5e502e1ef/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|art angels|grimes": {
+      "requested": {
+        "title": "Art Angels",
+        "creator": "Grimes",
+        "releaseYear": 2015
+      },
+      "matched": {
+        "title": "Art Angels",
+        "creator": "Grimes",
+        "releaseYear": 2015,
+        "releaseGroupId": "cac0be2c-509f-40a9-b1ac-a70aa2243a54",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/cac0be2c-509f-40a9-b1ac-a70aa2243a54/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|口是心非|张雨生": {
+      "requested": {
+        "title": "口是心非",
+        "creator": "张雨生",
+        "releaseYear": 1997
+      },
+      "matched": {
+        "title": "口是心非",
+        "creator": "張雨生",
+        "releaseYear": 1997,
+        "releaseGroupId": "79b81dcf-f4ee-457c-8695-cc8af2dc43e3",
+        "score": 0.92,
+        "source": "https://coverartarchive.org/release-group/79b81dcf-f4ee-457c-8695-cc8af2dc43e3/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|red burns|standing on the corner": {
+      "requested": {
+        "title": "Red Burns",
+        "creator": "Standing on the Corner",
+        "releaseYear": 2017
+      },
+      "matched": {
+        "title": "Red Burns",
+        "creator": "Standing on the Corner",
+        "releaseYear": 2017,
+        "releaseGroupId": "0b3691c0-7d33-4128-9386-92aae54825f0",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/0b3691c0-7d33-4128-9386-92aae54825f0/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|zuu|denzel curry": {
+      "requested": {
+        "title": "ZUU",
+        "creator": "Denzel Curry",
+        "releaseYear": 2019
+      },
+      "matched": {
+        "title": "ZUU",
+        "creator": "Denzel Curry",
+        "releaseYear": 2019,
+        "releaseGroupId": "03961b3f-23aa-4331-91dc-5598a3f3b0e6",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/03961b3f-23aa-4331-91dc-5598a3f3b0e6/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|kala|m.i.a.": {
+      "requested": {
+        "title": "Kala",
+        "creator": "M.I.A.",
+        "releaseYear": 2007
+      },
+      "matched": {
+        "title": "Kala",
+        "creator": "M.I.A.",
+        "releaseYear": 2007,
+        "releaseGroupId": "44261ea6-06cf-3fd3-a05c-42dee49c295a",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/44261ea6-06cf-3fd3-a05c-42dee49c295a/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|broke with expensive taste|azealia banks": {
+      "requested": {
+        "title": "Broke with Expensive Taste",
+        "creator": "Azealia Banks",
+        "releaseYear": 2014
+      },
+      "matched": {
+        "title": "Broke With Expensive Taste",
+        "creator": "Azealia Banks",
+        "releaseYear": 2014,
+        "releaseGroupId": "387abedf-df02-4922-8975-c89c156019c5",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/387abedf-df02-4922-8975-c89c156019c5/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|arular|m.i.a.": {
+      "requested": {
+        "title": "Arular",
+        "creator": "M.I.A.",
+        "releaseYear": 2005
+      },
+      "matched": {
+        "title": "Arular",
+        "creator": "M.I.A.",
+        "releaseYear": 2005,
+        "releaseGroupId": "32d38e25-27e8-45bc-b79b-931f5a609546",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/32d38e25-27e8-45bc-b79b-931f5a609546/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|life's a struggle|宋岳庭": {
+      "requested": {
+        "title": "Life's a Struggle",
+        "creator": "宋岳庭",
+        "releaseYear": 2003
+      },
+      "matched": {
+        "title": "Life's a Struggle",
+        "creator": "宋岳庭",
+        "releaseYear": 2003,
+        "releaseGroupId": "194409a3-36fa-4a10-8652-c9aa3b2953e6",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/194409a3-36fa-4a10-8652-c9aa3b2953e6/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|一定是爆炸么？|小老虎 & soulspeak": {
+      "requested": {
+        "title": "一定是爆炸么？",
+        "creator": "小老虎 & Soulspeak",
+        "releaseYear": 2014
+      },
+      "matched": {
+        "title": "一定是爆炸么？",
+        "creator": "小老虎 & Soulspeak",
+        "releaseYear": 2014,
+        "releaseGroupId": "c141b462-4cc4-42bb-806b-335d3f580821",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/c141b462-4cc4-42bb-806b-335d3f580821/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
+      }
+    },
+    "album|original pirate material|the streets": {
+      "requested": {
+        "title": "Original Pirate Material",
+        "creator": "The Streets",
+        "releaseYear": 2002
+      },
+      "matched": {
+        "title": "Original Pirate Material",
+        "creator": "The Streets",
+        "releaseYear": 2002,
+        "releaseGroupId": "e701a954-0fd7-3789-83cb-03b5a28783b7",
+        "score": 1,
+        "source": "https://coverartarchive.org/release-group/e701a954-0fd7-3789-83cb-03b5a28783b7/front-250",
+        "database": "MusicBrainz / Cover Art Archive"
       }
     }
   }

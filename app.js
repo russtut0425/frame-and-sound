@@ -1,6 +1,6 @@
 const STORAGE_KEY = "frame-and-sound-entries-v1";
 const SEED_MIGRATION_KEY = "frame-and-sound-seed-version";
-const SEED_VERSION = 2;
+const SEED_VERSION = 3;
 const accents = {violet:"#8d6df1",gold:"#f0b847",red:"#d94a42",blue:"#5a8ccc",amber:"#b86f3e",green:"#5f8e75"};
 const accentNames = Object.keys(accents);
 const seedEntries = [

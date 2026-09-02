@@ -56,7 +56,7 @@
           <label>原名 / 英文名<input name="subtitle"></label>
           <label><span id="creator-label">导演</span><input required name="creator"></label>
           <label>年份<input name="releaseYear" inputmode="numeric" placeholder="2001"></label>
-          <label>评分<input required name="rating" type="number" min="0" max="10" step="0.1" value="8.0"></label>
+          <label>评分（可选）<input name="rating" type="number" min="0" max="10" step="0.1" placeholder="暂不评分"></label>
           <label>记录日期<input required name="loggedDate" type="date"></label>
           <label class="wide">一句话留下它<input name="summary" placeholder="最先冒出来的那句话，不用完整。"></label>
           <label class="wide">真正击中我的是什么<textarea name="note" rows="4" placeholder="场景、声音、结构、情绪，或者某个说不清的瞬间。"></textarea></label>
@@ -72,6 +72,7 @@
   <div class="modal-backdrop detail-backdrop hidden" id="detail-backdrop"><article class="detail-modal" id="detail-modal"></article></div>
   <div class="toast hidden" id="toast"></div>
 </main>
+<script src="album-seeds.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

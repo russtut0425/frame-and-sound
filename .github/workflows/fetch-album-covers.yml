@@ -1,0 +1,38 @@
+name: Fetch album covers
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/fetch-album-covers.yml
+
+permissions: {}
+
+concurrency:
+  group: album-cover-archive
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Match and download covers
+        id: covers
+        continue-on-error: true
+        run: node scripts/fetch-covers.mjs
+      - name: Save covers and remove this one-time task
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add album-covers.js album-covers.json unmatched-covers.json covers 2>/dev/null || true
+          git rm .github/workflows/fetch-album-covers.yml scripts/fetch-covers.mjs
+          git commit -m "Add matched album cover art and remove one-time task [skip ci]"
+          git push
+      - name: Report matching failure
+        if: steps.covers.outcome == 'failure'
+        run: exit 1

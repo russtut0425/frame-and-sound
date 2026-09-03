@@ -178,7 +178,9 @@ const requestedAlbumData = [
   ["能登麻美子・地球NOTE「時のしおり」","能登麻美子",2009,"朗读、歌声与室内乐把时间写成一册安静的声音笔记。","朗读,室内乐,时间"],
   ["Ghosts from the Past","Bang Gang",2008,"冰岛低温流行把旧日幽灵唱得朦胧、柔软又难以摆脱。","Trip-hop,冰岛,幽灵"],
   ["Null & Void","Ground-Zero",1995,"采样、自由即兴和噪声不断跳切，像一台失控的声音剪辑机。","实验爵士,采样,噪声"],
-  ["阿呆船","Ahousen",2007,"粗粝噪声和自由演奏拖着一艘摇晃的船驶进日本地下现场。","噪声摇滚,即兴,地下"]
+  ["阿呆船","Ahousen",2007,"粗粝噪声和自由演奏拖着一艘摇晃的船驶进日本地下现场。","噪声摇滚,即兴,地下"],
+  ["梦桃花","刘元",1996,"萨克斯、唢呐与爵士即兴穿过中国旋律，长出一片既熟悉又陌生的声场。","中国爵士,民乐,即兴","2026-09-03"],
+  ["旧路心情","刘元",1996,"旧路不是回头路，爵士、乡土记忆与漂泊感在风里慢慢交汇。","中国爵士,乡土,漂泊","2026-09-03"]
 ];
 
 const hitTemplates = [
@@ -190,7 +192,7 @@ const hitTemplates = [
   (a,b,c) => `技术没有站到作品前面；最后记住的是${a}和${c}。`
 ];
 
-window.albumSeedEntries = requestedAlbumData.map(([title,creator,releaseYear,summary,tags],index) => {
+window.albumSeedEntries = requestedAlbumData.map(([title,creator,releaseYear,summary,tags,loggedDate="2026-09-02"],index) => {
   const [first="声音",second="情绪",third="回听"] = tags.split(",");
   return {
     id: 10001 + index,
@@ -200,7 +202,7 @@ window.albumSeedEntries = requestedAlbumData.map(([title,creator,releaseYear,sum
     creator,
     releaseYear,
     rating: null,
-    loggedDate: "2026-09-02",
+    loggedDate,
     summary,
     note: hitTemplates[index % hitTemplates.length](first,second,third),
     tags,

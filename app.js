@@ -2,7 +2,7 @@ const STORAGE_KEY = "frame-and-sound-entries-v1";
 const SEED_MIGRATION_KEY = "frame-and-sound-seed-version";
 const IMAGE_DB_NAME = "frame-and-sound-images";
 const IMAGE_STORE_NAME = "images";
-const SEED_VERSION = 5;
+const SEED_VERSION = 6;
 const accents = {violet:"#8d6df1",gold:"#f0b847",red:"#d94a42",blue:"#5a8ccc",amber:"#b86f3e",green:"#5f8e75"};
 const accentNames = Object.keys(accents);
 const seedEntries = [
@@ -12,7 +12,8 @@ const seedEntries = [
   {id:4,type:"album",title:"We Will Always Love You",subtitle:"The Avalanches",creator:"The Avalanches",releaseYear:2020,rating:9.3,loggedDate:"2026-08-08",summary:"像把已经消失的声音送进宇宙，让它们继续彼此相爱。",note:"采样不是炫技，而是记忆的物理形态。温柔，但背后一直有死亡的阴影。",tags:"采样,宇宙,记忆",favorite:true,accent:"blue"},
   {id:5,type:"film",title:"花样年华",subtitle:"In the Mood for Love",creator:"王家卫",releaseYear:2000,rating:7.8,loggedDate:"2026-08-03",summary:"真正留下来的，是两个人始终没有做出的事。",note:"重复的走廊、楼梯和音乐把时间困住。留白有效，但情绪距离也比预想中更远。",tags:"留白,时间,欲望",favorite:false,accent:"amber"},
   {id:6,type:"album",title:"The Age of Adz",subtitle:"Sufjan Stevens",creator:"Sufjan Stevens",releaseYear:2010,rating:8.7,loggedDate:"2026-07-31",summary:"电子噪点包住一颗过度裸露的心。",note:"复杂并不是目的。那些失控的编排，最终都指向一种无法体面表达的脆弱。",tags:"电子,私人,失控",favorite:true,accent:"green"},
-  ...(window.albumSeedEntries||[])
+  ...(window.albumSeedEntries||[]),
+  ...(window.gameSeedEntries||[])
 ];
 
 let storageMigrationNeeded = false;
@@ -54,7 +55,7 @@ function imageRef(id){return `idb:${String(id)}`;}
 function validFileImage(value){return /^covers\/[a-z0-9._-]+\.(?:jpe?g|png|webp)$/i.test(String(value||""));}
 function imageOf(entry){
   const uploaded=typeof entry?.image==="string"?entry.image:"";
-  const automatic=window.albumCoverMap?.[entryIdentity(entry)]||"";
+  const identity=entryIdentity(entry);const automatic=window.gameCoverMap?.[identity]||window.albumCoverMap?.[identity]||"";
   if(isDataImage(uploaded))return uploaded;
   if(isStoredImage(uploaded))return runtimeImageURLs.get(uploaded)||(validFileImage(automatic)?automatic:"");
   if(validFileImage(uploaded))return uploaded;

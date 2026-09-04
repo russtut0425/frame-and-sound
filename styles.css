@@ -35,3 +35,28 @@ footer { display:flex; justify-content:space-between; border-top:1px solid var(-
 @media(max-width:900px){.hero{grid-template-columns:1fr;gap:45px;padding-top:64px}.stats-panel{border-left:0;border-top:1px solid var(--line);padding:28px 0 0;max-width:480px}.entry-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.site-header{height:66px}.brand{font-size:18px}.brand-mark{width:27px;height:27px}.search-box{width:42px;padding:0;justify-content:center}.search-box input,.search-box kbd{display:none}.add-button{padding:0 12px;font-size:12px}.hero{min-height:auto;padding:55px 22px}.hero h1{font-size:48px}.hero-note{font-size:14px}.collection{padding-top:36px}.tabs{gap:18px}.entry-grid{grid-template-columns:1fr}.card-art{height:240px}.form-grid{grid-template-columns:1fr}.form-grid .wide{grid-column:auto}.image-picker{grid-template-columns:110px 1fr}.image-preview{width:110px;height:88px}.record-modal,.detail-modal{padding:30px 22px}.detail-score{font-size:42px}.detail-modal h2{margin-top:35px;max-width:100%}.detail-modal blockquote{font-size:17px}footer{flex-direction:column;gap:8px}}
 .hidden{display:none!important}.backup-actions{display:flex;gap:12px}.backup-actions button,.backup-actions label{border:0;background:transparent;color:var(--muted);font:10px system-ui,sans-serif;letter-spacing:.08em;cursor:pointer;padding:0}.backup-actions input{display:none}.detail-actions{display:flex;gap:18px}.detail-actions button{border:0;background:transparent;border-bottom:1px solid var(--line);cursor:pointer;padding:4px 0;font:11px system-ui,sans-serif}.detail-actions .danger{color:#9d4a44;border-color:#a66862}.field-error{color:#a94239;font:12px system-ui,sans-serif;margin:10px 0 0}.no-results{grid-column:1/-1;min-height:260px;border:1px dashed var(--line);display:grid;place-content:center;text-align:center;color:var(--muted);font:13px/1.8 system-ui,sans-serif}
+
+/* Game log: a darker, denser surface than film and album cards. */
+.type-switch { grid-template-columns:repeat(3,1fr); }
+.form-grid select { width:100%; border:0; border-bottom:1px solid var(--line); background:rgba(255,255,255,.25); border-radius:0; outline:none; padding:10px 2px; color:var(--ink); font:14px/1.6 system-ui,sans-serif; }
+.form-grid select:focus { border-color:var(--red); }
+.game-card { background:#1d1c18; color:var(--paper); border-color:rgba(241,238,229,.18); }
+.game-card:hover,.game-card:focus { box-shadow:0 18px 48px rgba(12,11,9,.28); }
+.game-card .card-art { height:188px; border-bottom-color:rgba(241,238,229,.16); background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 28%,#161511),#292721); }
+.game-card .card-art::before { color:rgba(241,238,229,.055); }
+.game-card .card-art.game-image::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 54%,rgba(0,0,0,.42)); pointer-events:none; }
+.game-card .type-badge { background:var(--accent); color:#171611; }
+.game-card .favorite { color:var(--paper); }
+.game-card .card-title-row p,.game-card .creator,.game-card .tag-row span { color:#aaa59a; }
+.game-card .card-title-row strong { color:var(--accent); }
+.game-card .card-body blockquote { border-color:rgba(241,238,229,.16); }
+.art-shape.game { width:154px; height:86px; transform:none; border-color:color-mix(in srgb,var(--accent) 75%,var(--paper)); }
+.art-shape.game::before { inset:10px; transform:none; border-color:color-mix(in srgb,var(--accent) 50%,transparent); }
+.art-shape.game::after { inset:auto 54px 13px; height:3px; transform:none; background:var(--accent); border:0; }
+.game-meta,.detail-game-meta { display:flex; flex-wrap:wrap; gap:7px; margin:0 0 15px; }
+.game-meta span,.detail-game-meta span { border:1px solid color-mix(in srgb,var(--accent) 48%,transparent); padding:5px 8px; color:color-mix(in srgb,var(--accent) 72%,var(--paper)); font:600 12px/1 system-ui,sans-serif; letter-spacing:.03em; }
+.detail-modal.game-detail { background:#1d1c18; color:var(--paper); }
+.detail-modal.game-detail .close-button { color:var(--paper); }
+.detail-modal.game-detail .detail-subtitle,.detail-modal.game-detail .creator,.detail-modal.game-detail .detail-bottom time,.detail-modal.game-detail .tag-row span { color:#aaa59a; }
+.detail-modal.game-detail .detail-note,.detail-modal.game-detail .detail-actions button { border-color:rgba(241,238,229,.18); }
+.detail-image.game img { aspect-ratio:16/9; object-fit:cover; }

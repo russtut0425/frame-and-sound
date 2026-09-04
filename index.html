@@ -3,31 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="记录真正穿过你的电影与专辑，以及它们为什么留下来。">
-  <meta property="og:title" content="帧与声｜电影与专辑私人档案">
-  <meta property="og:description" content="记录真正穿过你的电影与专辑，以及它们为什么留下来。">
+  <meta name="description" content="记录真正穿过你的电影、专辑与游戏，以及它们为什么留下来。">
+  <meta property="og:title" content="帧与声｜电影、专辑与游戏私人档案">
+  <meta property="og:description" content="记录真正穿过你的电影、专辑与游戏，以及它们为什么留下来。">
   <meta property="og:image" content="og.png">
-  <title>帧与声｜电影与专辑私人档案</title>
+  <title>帧与声｜电影、专辑与游戏私人档案</title>
   <link rel="icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 <main id="top">
   <header class="site-header">
     <a class="brand" href="#top" aria-label="帧与声首页"><span class="brand-mark"><i></i><i></i><i></i></span><span>帧与声</span></a>
     <div class="header-actions">
-      <label class="search-box"><span>⌕</span><input id="search" placeholder="搜片名、专辑、作者或标签" aria-label="搜索记录"><kbd>⌘ K</kbd></label>
+      <label class="search-box"><span>⌕</span><input id="search" placeholder="搜作品、作者、厂商或标签" aria-label="搜索记录"><kbd>⌘ K</kbd></label>
       <button class="add-button" id="add-entry"><span>＋</span> 新记录</button>
     </div>
   </header>
 
   <section class="hero">
-    <div class="hero-copy"><p class="eyebrow">A PRIVATE ARCHIVE OF FILM &amp; MUSIC</p><h1>留下那些<br><em>真正穿过你的</em>作品。</h1><p class="hero-note">不是打卡，也不替作品下定论。只记住当时被什么击中，以及后来为什么还会回来。</p></div>
-    <div class="stats-panel" aria-label="收藏统计"><div><strong id="film-count">00</strong><span>部电影</span></div><div><strong id="album-count">00</strong><span>张专辑</span></div><div><strong id="average-rating">0.0</strong><span>平均分</span></div><div class="orbit" aria-hidden="true"><span></span><span></span><span></span></div></div>
+    <div class="hero-copy"><p class="eyebrow">A PRIVATE ARCHIVE OF FILM, MUSIC &amp; GAMES</p><h1>留下那些<br><em>真正穿过你的</em>作品。</h1><p class="hero-note">不是打卡，也不替作品下定论。只记住当时被什么击中，以及后来为什么还会回来。</p></div>
+    <div class="stats-panel" aria-label="收藏统计"><div><strong id="film-count">00</strong><span>部电影</span></div><div><strong id="album-count">00</strong><span>张专辑</span></div><div><strong id="game-count">00</strong><span>款游戏</span></div><div><strong id="average-rating">—</strong><span>平均分</span></div><div class="orbit" aria-hidden="true"><span></span><span></span><span></span></div></div>
   </section>
 
   <section class="collection">
-    <div class="collection-head"><div class="tabs" role="tablist" aria-label="记录类型"><button data-filter="all" class="active">全部 <small id="all-tab-count">0</small></button><button data-filter="film">电影 <small id="film-tab-count">0</small></button><button data-filter="album">专辑 <small id="album-tab-count">0</small></button></div><button class="sort-button" id="sort-button">最近记录 ↓</button></div>
+    <div class="collection-head"><div class="tabs" role="tablist" aria-label="记录类型"><button data-filter="all" class="active">全部 <small id="all-tab-count">0</small></button><button data-filter="film">电影 <small id="film-tab-count">0</small></button><button data-filter="album">专辑 <small id="album-tab-count">0</small></button><button data-filter="game">游戏 <small id="game-tab-count">0</small></button></div><button class="sort-button" id="sort-button">最近记录 ↓</button></div>
     <div class="entry-grid" id="entry-grid"></div>
   </section>
 
@@ -38,7 +38,7 @@
       <button class="close-button" data-close="form" aria-label="关闭">×</button><p class="eyebrow" id="form-eyebrow">ADD TO THE ARCHIVE</p><h2 id="form-title">刚看完，还是后来想起？</h2>
       <form id="entry-form">
         <input type="hidden" name="id">
-        <div class="type-switch"><button type="button" class="active" data-type="film">电影</button><button type="button" data-type="album">专辑</button></div>
+        <div class="type-switch"><button type="button" class="active" data-type="film">电影</button><button type="button" data-type="album">专辑</button><button type="button" data-type="game">游戏</button></div>
         <input type="hidden" name="type" value="film">
         <div class="image-field">
           <span id="image-field-label">剧照（可选）</span>
@@ -58,11 +58,14 @@
           <label>年份<input name="releaseYear" inputmode="numeric" placeholder="2001"></label>
           <label>评分（可选）<input name="rating" type="number" min="0" max="10" step="0.1" placeholder="暂不评分"></label>
           <label>记录日期<input required name="loggedDate" type="date"></label>
-          <label class="wide">一句话留下它<input name="summary" placeholder="最先冒出来的那句话，不用完整。"></label>
-          <label class="wide">真正击中我的是什么<textarea name="note" rows="4" placeholder="场景、声音、结构、情绪，或者某个说不清的瞬间。"></textarea></label>
+          <label class="game-only hidden">平台<input name="platform" placeholder="PC / PS5 / Switch"></label>
+          <label class="game-only hidden">游玩状态<select name="status"><option value="wishlist">想玩</option><option value="playing" selected>正在玩</option><option value="finished">已通关</option><option value="paused">暂停</option><option value="dropped">弃坑</option></select></label>
+          <label class="game-only hidden">时长（小时）<input name="hours" type="number" min="0" step="0.5" placeholder="可留空"></label>
+          <label class="wide"><span id="summary-label">一句话留下它</span><input name="summary" placeholder="最先冒出来的那句话，不用完整。"></label>
+          <label class="wide"><span id="note-label">真正击中我的是什么</span><textarea name="note" rows="4" placeholder="场景、声音、结构、情绪，或者某个说不清的瞬间。"></textarea></label>
           <label class="wide">标签<input name="tags" placeholder="用逗号隔开，例如：留白, 城市, 欲望"></label>
         </div>
-        <label class="check-row"><input type="checkbox" name="favorite"><span>这是我会反复回去的作品</span></label>
+        <label class="check-row"><input type="checkbox" name="favorite"><span id="favorite-label">这是我会反复回去的作品</span></label>
         <p class="field-error hidden" id="form-error"></p>
         <button class="save-button" id="save-button">收进档案</button>
       </form>
@@ -74,6 +77,6 @@
 </main>
 <script src="album-seeds.js?v=2"></script>
 <script src="album-covers.js?v=3"></script>
-<script src="app.js?v=6"></script>
+<script src="app.js?v=7"></script>
 </body>
 </html>

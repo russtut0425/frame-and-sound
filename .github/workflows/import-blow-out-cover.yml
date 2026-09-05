@@ -1,0 +1,34 @@
+name: Import Blow Out poster once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/import-blow-out-cover.yml
+
+permissions:
+  contents: write
+
+jobs:
+  import-poster:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download verified theatrical poster
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p covers
+          curl --fail --location --retry 3 --retry-all-errors --connect-timeout 20 \
+            "https://upload.wikimedia.org/wikipedia/pt/d/d7/Blow_Out_-_poster.jpg" \
+            --output "covers/film-blow-out-1981.jpg"
+          test "$(file -b --mime-type covers/film-blow-out-1981.jpg)" = "image/jpeg"
+          rm -f .github/workflows/import-blow-out-cover.yml
+      - name: Commit poster and retire importer
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add covers/film-blow-out-1981.jpg .github/workflows/import-blow-out-cover.yml
+          git commit -m "Import Blow Out theatrical poster"
+          git push

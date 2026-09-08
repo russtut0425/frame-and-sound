@@ -60,3 +60,37 @@ footer { display:flex; justify-content:space-between; border-top:1px solid var(-
 .detail-modal.game-detail .detail-subtitle,.detail-modal.game-detail .creator,.detail-modal.game-detail .detail-bottom time,.detail-modal.game-detail .tag-row span { color:#aaa59a; }
 .detail-modal.game-detail .detail-note,.detail-modal.game-detail .detail-actions button { border-color:rgba(241,238,229,.18); }
 .detail-image.game img { aspect-ratio:16/9; object-fit:cover; }
+
+
+/* Archive usability: visible search, keyboard navigation and resilient narrow layouts. */
+button,input,textarea,select { font:inherit; }
+:focus-visible { outline:2px solid var(--red); outline-offset:4px; }
+.search-box:focus-within { outline:2px solid var(--red); outline-offset:2px; }
+.entry-card:focus-visible { outline:2px solid var(--red); }
+.card-title-row>div,.header-actions { min-width:0; }
+.card-title-row h2,.card-title-row p,.detail-modal h2,.detail-subtitle,.detail-note p { overflow-wrap:anywhere; }
+.card-title-row strong { flex-shrink:0; }
+.collection-head,.backup-actions { flex-wrap:wrap; gap:16px; }
+.collection-head { margin-bottom:12px; }
+.result-count { margin:0 0 24px; color:var(--muted); font:12px system-ui,sans-serif; }
+body.modal-open { overflow:hidden; }
+.record-modal,.detail-modal { max-height:92dvh; overscroll-behavior:contain; }
+.close-button { min-width:44px; min-height:44px; }
+.tabs button,.sort-button,.backup-actions button,.image-picker-actions button,.detail-actions button { min-height:44px; }
+.toast { max-width:calc(100vw - 32px); width:max-content; line-height:1.6; overflow-wrap:anywhere; }
+@media(max-width:620px){
+  .site-header { height:auto; min-height:110px; padding:12px 22px; flex-wrap:wrap; gap:10px; }
+  .header-actions { display:contents; }
+  .search-box { order:3; width:100%; height:42px; padding:0 12px; justify-content:flex-start; }
+  .search-box input { display:block; font-size:16px; }
+  .search-box kbd { display:none; }
+  .add-button { margin-left:auto; }
+  .collection-head { align-items:flex-start; }
+  .tabs { gap:16px; flex-wrap:wrap; }
+  .tabs small { margin-left:3px; }
+  .form-grid input,.form-grid textarea,.form-grid select { font-size:16px; }
+  .modal-backdrop { padding:10px; }
+  .record-modal,.detail-modal { max-height:calc(100dvh - 20px); }
+  .backup-actions { gap:4px 16px; }
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}

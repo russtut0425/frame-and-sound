@@ -14,5 +14,21 @@ window.filmSeedEntries = [
     favorite: false,
     accent: "blue",
     image: ""
+  },
+  {
+    "id": 30002,
+    "type": "film",
+    "title": "诗",
+    "subtitle": "시 / Poetry",
+    "creator": "李沧东",
+    "releaseYear": 2010,
+    "rating": null,
+    "loggedDate": "2026-09-10",
+    "summary": "一位学习写诗的老人，在记忆衰退与家庭秘密之间重新审视身边的世界。",
+    "note": "",
+    "tags": "韩国,诗歌,记忆,伦理",
+    "favorite": false,
+    "accent": "green",
+    "image": ""
   }
 ];

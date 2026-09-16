@@ -211,3 +211,20 @@ window.albumSeedEntries = requestedAlbumData.map(([title,creator,releaseYear,sum
     image: ""
   };
 });
+
+window.albumSeedEntries.push({
+  "id": 10183,
+  "type": "album",
+  "title": "The Velvet Rope",
+  "subtitle": "",
+  "creator": "Janet Jackson",
+  "releaseYear": 1997,
+  "rating": 9.3,
+  "loggedDate": "2026-09-16",
+  "summary": "以 R&B、电子节拍与亲密独白，探索欲望、孤独和自我接纳。",
+  "note": "",
+  "tags": "R&B,电子,自我接纳",
+  "favorite": false,
+  "accent": "red",
+  "image": ""
+});

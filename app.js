@@ -2,7 +2,7 @@ const STORAGE_KEY = "frame-and-sound-entries-v1";
 const SEED_MIGRATION_KEY = "frame-and-sound-seed-version";
 const IMAGE_DB_NAME = "frame-and-sound-images";
 const IMAGE_STORE_NAME = "images";
-const SEED_VERSION = 8;
+const SEED_VERSION = 9;
 const accents = {violet:"#8d6df1",gold:"#f0b847",red:"#d94a42",blue:"#5a8ccc",amber:"#b86f3e",green:"#5f8e75"};
 const accentNames = Object.keys(accents);
 const seedEntries = [
@@ -43,6 +43,7 @@ function entryIdentity(entry){return [entry.type,entry.title,entry.creator].map(
 // Metadata and records share one atomic localStorage write. Keep legacy arrays readable.
 function localDate(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;}
 function seedVersion(entry){
+  if(entry.id===10183)return 9;
   if(entry.id<=6)return 1;
   if(entry.id===30002)return 8;
   if(entry.type==="film")return 7;

@@ -119,3 +119,27 @@ body.modal-open { overflow:hidden; }
 .image-preview.album-preview { height:auto; aspect-ratio:1; }
 .image-preview.album-preview img { object-fit:contain; }
 @media(max-width:620px){.album-card .card-art{--cover-size:240px}.album-card .card-body{padding:16px 18px 20px}.album-card .card-title-row h2{font-size:21px}}
+
+/* Score colors express the rating, independently of the work's accent. */
+:root {
+  --score-red:#c73532;
+  --score-gold:#946b09;
+  --score-orange:#b45214;
+  --score-blue:#326aaa;
+  --score-unrated:#777266;
+}
+.game-card,.game-detail {
+  --score-red:#ff7470;
+  --score-gold:#efc55b;
+  --score-orange:#f2a05c;
+  --score-blue:#7eb1ee;
+  --score-unrated:#aaa59a;
+}
+[data-rating-tier="perfect"] { --rating-color:var(--score-red); }
+[data-rating-tier="gold"] { --rating-color:var(--score-gold); }
+[data-rating-tier="orange"] { --rating-color:var(--score-orange); }
+[data-rating-tier="blue"] { --rating-color:var(--score-blue); }
+[data-rating-tier="unrated"] { --rating-color:var(--score-unrated); }
+.entry-card[data-rating-tier] .card-title-row strong,
+.detail-modal[data-rating-tier] .detail-score,
+#average-rating[data-rating-tier] { color:var(--rating-color); }

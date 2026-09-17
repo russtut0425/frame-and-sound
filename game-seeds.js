@@ -52,3 +52,23 @@ window.gameSeedEntries = requestedGameData.map(([title,subtitle,creator,releaseY
   status: "",
   hours: ""
 }));
+
+window.gameSeedEntries.push({
+  "id": 20033,
+  "type": "game",
+  "title": "最后的篝火",
+  "subtitle": "The Last Campfire",
+  "creator": "Hello Games",
+  "releaseYear": 2020,
+  "rating": 10,
+  "loggedDate": "2026-09-17",
+  "summary": "一团迷失的余烬穿过遗迹与谜题，帮助失去希望的旅人寻找前行的路。",
+  "note": "",
+  "tags": "解谜,冒险,希望",
+  "favorite": false,
+  "accent": "amber",
+  "image": "",
+  "platform": "",
+  "status": "finished",
+  "hours": 7
+});

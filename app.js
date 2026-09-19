@@ -207,26 +207,28 @@ function gameMetaOf(entry){
   return [gameStatuses[entry.status]||"",String(entry.platform||"").trim(),hours===null?"":`${hours} 小时`].filter(Boolean);
 }
 
+function renderCard(entry,index){
+  const copy=typeCopy[entry.type]||typeCopy.film;
+  const image=imageOf(entry);
+  const art=image?`<img class="entry-image" src="${escapeHTML(image)}" alt="${escapeHTML(entry.title)}" loading="lazy" decoding="async">`:'<span class="cover-placeholder" aria-hidden="true">—</span>';
+  return `<article class="entry-card" data-id="${escapeHTML(entry.id)}" data-rating-tier="${ratingTier(entry)}" role="button" aria-label="查看 ${escapeHTML(entry.title)}" tabindex="0">
+    <div class="card-art ${image?"has-image":""}">${art}<span class="type-badge">${copy.badge}</span>${entry.favorite?'<span class="favorite" aria-label="心爱作品">♥</span>':""}</div>
+    <div class="card-body">
+      <div class="card-title-row"><div><h2>${escapeHTML(entry.title)}</h2><p>${escapeHTML(entry.subtitle||"")}</p></div>${ratingMarkup(entry)}</div>
+      <p class="creator">${escapeHTML(entry.creator)}${entry.releaseYear?` · ${escapeHTML(entry.releaseYear)}`:""}</p>
+      <blockquote>${escapeHTML(entry.summary||"")}</blockquote>
+      <div class="tag-row">${tagsOf(entry).slice(0,3).map(tag=>`<span>#${escapeHTML(tag)}</span>`).join("")}</div>
+    </div></article>`;
+}
+
 function render(){
   const films=entries.filter(e=>e.type==="film");const albums=entries.filter(e=>e.type==="album");const games=entries.filter(e=>e.type==="game");const rated=entries.map(ratingOf).filter(rating=>rating!==null);const average=rated.length?rated.reduce((sum,rating)=>sum+rating,0)/rated.length:null;
   $("#film-count").textContent=String(films.length).padStart(2,"0");$("#album-count").textContent=String(albums.length).padStart(2,"0");$("#game-count").textContent=String(games.length).padStart(2,"0");$("#average-rating").textContent=average===null?"—":average.toFixed(1);$("#all-tab-count").textContent=entries.length;$("#film-tab-count").textContent=films.length;$("#album-tab-count").textContent=albums.length;$("#game-tab-count").textContent=games.length;
   const tokens=normalizeSearch(query).split(/\s+/).filter(Boolean);
   const shown=entries.filter(e=>activeFilter==="all"||e.type===activeFilter).filter(e=>tokens.every(token=>searchText(e).includes(token))).sort((a,b)=>{if(activeSort!=="rating")return b.loggedDate.localeCompare(a.loggedDate);const aRating=ratingOf(a);const bRating=ratingOf(b);if(aRating===null&&bRating===null)return b.loggedDate.localeCompare(a.loggedDate);if(aRating===null)return 1;if(bRating===null)return -1;return bRating-aRating;});
   $("#average-rating").dataset.ratingTier=ratingTier({rating:average});
-  $("#entry-grid").classList.toggle("album-grid",activeFilter==="album");
   $("#result-count").textContent=`显示 ${shown.length} 条记录`;
-  $("#entry-grid").innerHTML=shown.length?shown.map((entry,index)=>{
-    const copy=typeCopy[entry.type]||typeCopy.film;const image=imageOf(entry);const symbol=entry.type==="film"?"◐":entry.type==="album"?"◉":"◆";const art=image?`<img class="entry-image" src="${escapeHTML(image)}" alt="${escapeHTML(entry.title)}" loading="lazy" decoding="async">`:`<div class="art-shape ${entry.type}"><span>${symbol}</span></div>`;const gameMeta=gameMetaOf(entry);const gameInfo=gameMeta.length?`<div class="game-meta">${gameMeta.map(item=>`<span>${escapeHTML(item)}</span>`).join("")}</div>`:"";
-    if(entry.type==="album")return `<article class="entry-card album-card" data-id="${escapeHTML(entry.id)}" data-rating-tier="${ratingTier(entry)}" role="button" aria-label="查看 ${escapeHTML(entry.title)}" tabindex="0" style="--accent:${accents[entry.accent]||accents.red}">
-      <div class="album-sleeve"><div class="card-art album-art ${image?"has-image album-image":""}">${art}${entry.favorite?'<span class="favorite" aria-label="心爱作品">♥</span>':""}</div></div>
-      <div class="card-body"><div class="album-caption"><span>ALBUM</span>${entry.releaseYear?`<span>${escapeHTML(entry.releaseYear)}</span>`:""}</div>
-        <div class="card-title-row"><div><h2>${escapeHTML(entry.title)}</h2>${entry.subtitle?`<p>${escapeHTML(entry.subtitle)}</p>`:""}</div>${ratingMarkup(entry)}</div>
-        <p class="creator">${escapeHTML(entry.creator)}</p>
-        ${entry.summary?`<blockquote>${escapeHTML(entry.summary)}</blockquote>`:""}
-        <div class="tag-row">${tagsOf(entry).slice(0,3).map(tag=>`<span>#${escapeHTML(tag)}</span>`).join("")}</div>
-      </div></article>`;
-    return `<article class="entry-card ${entry.type==="game"?"game-card":""}" data-id="${escapeHTML(entry.id)}" data-rating-tier="${ratingTier(entry)}" role="button" aria-label="查看 ${escapeHTML(entry.title)}" tabindex="0" style="--accent:${accents[entry.accent]||accents.red}"><div class="card-art ${image?`has-image ${entry.type}-image`:""}" data-index="${String(index+1).padStart(2,"0")}">${art}<span class="type-badge">${copy.badge}</span>${entry.favorite?'<span class="favorite" aria-label="心爱作品">♥</span>':""}</div><div class="card-body"><div class="card-title-row"><div><h2>${escapeHTML(entry.title)}</h2><p>${escapeHTML(entry.subtitle)}</p></div>${ratingMarkup(entry)}</div><p class="creator">${escapeHTML(entry.creator)}${entry.releaseYear?` · ${escapeHTML(entry.releaseYear)}`:""}</p>${gameInfo}<blockquote>“${escapeHTML(entry.summary)}”</blockquote><div class="tag-row">${tagsOf(entry).slice(0,3).map(tag=>`<span>#${escapeHTML(tag)}</span>`).join("")}</div></div></article>`;
-  }).join(""):`<div class="no-results"><span>∅</span><p>${query.trim()?"没有匹配的记录，试试更短的关键词。":"这里还没有记录，点击“新记录”添加。"}</p></div>`;
+  $("#entry-grid").innerHTML=shown.length?shown.map(renderCard).join(""):`<div class="no-results"><span>∅</span><p>${query.trim()?"没有匹配的记录，试试更短的关键词。":"这里还没有记录，点击“新记录”添加。"}</p></div>`;
 }
 
 function openForm(entry=null){

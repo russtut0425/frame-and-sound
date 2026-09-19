@@ -212,7 +212,7 @@ function renderCard(entry,index){
   const image=imageOf(entry);
   const art=image?`<img class="entry-image" src="${escapeHTML(image)}" alt="${escapeHTML(entry.title)}" loading="lazy" decoding="async">`:'<span class="cover-placeholder" aria-hidden="true">—</span>';
   return `<article class="entry-card" data-id="${escapeHTML(entry.id)}" data-rating-tier="${ratingTier(entry)}" role="button" aria-label="查看 ${escapeHTML(entry.title)}" tabindex="0">
-    <div class="card-art ${image?"has-image":""}">${art}<span class="type-badge">${copy.badge}</span>${entry.favorite?'<span class="favorite" aria-label="心爱作品">♥</span>':""}</div>
+    <div class="card-art ${image?"has-image":""} ${entry.type==="album"?"cover-contained":""}">${art}<span class="type-badge">${copy.badge}</span>${entry.favorite?'<span class="favorite" aria-label="心爱作品">♥</span>':""}</div>
     <div class="card-body">
       <div class="card-title-row"><div><h2>${escapeHTML(entry.title)}</h2><p>${escapeHTML(entry.subtitle||"")}</p></div>${ratingMarkup(entry)}</div>
       <p class="creator">${escapeHTML(entry.creator)}${entry.releaseYear?` · ${escapeHTML(entry.releaseYear)}`:""}</p>

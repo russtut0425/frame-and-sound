@@ -139,3 +139,7 @@ body.modal-open { overflow:hidden; }
 .entry-card .card-body blockquote { min-height:0; height:72px; margin:0; padding:12px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); font:13px/23px "Noto Serif SC","Songti SC","SimSun",Georgia,serif; overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; }
 .entry-card .tag-row { min-width:0; margin:0; height:18px; display:flex; flex-wrap:nowrap; gap:10px; overflow:hidden; align-items:center; }
 .entry-card .tag-row span { flex-shrink:0; color:var(--muted); font:11px/18px system-ui,sans-serif; }
+
+/* Preserve album artwork inside the same 16:9 frame used by all cards. */
+.entry-card .card-art.cover-contained { background:#f8f6ef; }
+.entry-card .card-art.cover-contained .entry-image { object-fit:contain; object-position:center; }

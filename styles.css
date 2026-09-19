@@ -142,3 +142,6 @@ body.modal-open { overflow:hidden; }
 /* Preserve album artwork inside the same 16:9 frame used by all cards. */
 .entry-card .card-art.cover-contained { background:#f8f6ef; }
 .entry-card .card-art.cover-contained .entry-image { object-fit:contain; object-position:center; }
+
+/* Perfect-score count shares the perfect-score color. */
+#perfect-count { color:var(--score-red); }

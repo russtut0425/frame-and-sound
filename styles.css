@@ -96,10 +96,10 @@ body.modal-open { overflow:hidden; }
 
 /* One score treatment: only the color changes with the numeric tier. */
 :root {
-  --score-red:#B8323A;
-  --score-gold:#B8922E;
-  --score-orange:#C6652E;
-  --score-blue:#4F6F9F;
+  --score-red:#E4002B;
+  --score-gold:#FEDB00;
+  --score-orange:#FF6900;
+  --score-blue:#41B6E6;
   --score-unrated:#777266;
 }
 [data-rating-tier="perfect"] { --rating-color:var(--score-red); }

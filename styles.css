@@ -120,7 +120,7 @@ body.modal-open { overflow:hidden; }
 .image-preview.album-preview img { object-fit:contain; }
 @media(max-width:620px){.album-card .card-art{--cover-size:240px}.album-card .card-body{padding:16px 18px 20px}.album-card .card-title-row h2{font-size:21px}}
 
-/* Shared score typography and layered glow; solid glyphs remain crisp. */
+/* Print-like score hierarchy, shared by every media type and detail view. */
 :root {
   --score-red:#B8323A;
   --score-gold:#B8922E;
@@ -129,49 +129,42 @@ body.modal-open { overflow:hidden; }
   --score-unrated:#777266;
 }
 .game-card,.game-detail { --score-unrated:#aaa59a; }
+[data-rating-tier] {
+  --rating-weight:400;
+  --rating-stroke:0px;
+  --rating-shadow:none;
+}
 [data-rating-tier="perfect"] {
   --rating-color:var(--score-red);
-  --rating-shadow:0 1px 2px rgba(184,50,58,.64),0 0 8px rgba(184,50,58,.48),0 0 20px rgba(184,50,58,.30);
-  --rating-aura:radial-gradient(ellipse at center,rgba(184,50,58,.28) 0%,rgba(184,50,58,.15) 38%,rgba(184,50,58,.05) 60%,transparent 76%);
-  --rating-aura-inset:-.55em -.65em;
+  --rating-weight:700;
+  --rating-stroke:.3px;
+  --rating-shadow:0 1px 0 rgba(110,25,31,.16);
 }
 [data-rating-tier="gold"] {
   --rating-color:var(--score-gold);
-  --rating-shadow:0 1px 2px rgba(184,146,46,.40),0 0 6px rgba(184,146,46,.28),0 0 12px rgba(184,146,46,.16);
-  --rating-aura:radial-gradient(ellipse at center,rgba(184,146,46,.18) 0%,rgba(184,146,46,.09) 36%,rgba(184,146,46,.025) 58%,transparent 74%);
-  --rating-aura-inset:-.35em -.45em;
+  --rating-weight:600;
+  --rating-stroke:.12px;
 }
-[data-rating-tier="orange"] { --rating-color:var(--score-orange); --rating-shadow:none; }
-[data-rating-tier="blue"] { --rating-color:var(--score-blue); --rating-shadow:none; }
-[data-rating-tier="unrated"] { --rating-color:var(--score-unrated); --rating-shadow:none; }
+[data-rating-tier="orange"] { --rating-color:var(--score-orange); }
+[data-rating-tier="blue"] { --rating-color:var(--score-blue); }
+[data-rating-tier="unrated"] { --rating-color:var(--score-unrated); }
 .entry-card .card-title-row .rating-score[data-rating-tier],
 .detail-modal .detail-score.rating-score[data-rating-tier],
 #average-rating[data-rating-tier] {
   font-family:Georgia,"Times New Roman",serif;
-  font-weight:500;
+  font-weight:var(--rating-weight);
   font-style:normal;
   font-variant-numeric:lining-nums tabular-nums;
   letter-spacing:0;
   color:var(--rating-color);
-  text-shadow:var(--rating-shadow,none);
+  -webkit-text-stroke:var(--rating-stroke) currentColor;
+  text-shadow:var(--rating-shadow);
 }
-.detail-score small { text-shadow:none; }
-
-/* Keep score size identical across film, album and game cards. */
 .entry-card .card-title-row .rating-score[data-rating-tier] { font-size:28px; line-height:1; }
-
-/* Ambient light is a separate layer behind sharp, opaque score glyphs. */
-.rating-score,
-#average-rating[data-rating-tier] { position:relative; isolation:isolate; }
-.rating-score[data-rating-tier="perfect"]::before,
-.rating-score[data-rating-tier="gold"]::before,
-#average-rating[data-rating-tier="perfect"]::before,
-#average-rating[data-rating-tier="gold"]::before {
-  content:"";
-  position:absolute;
-  z-index:-1;
-  inset:var(--rating-aura-inset);
-  border-radius:50%;
-  background:var(--rating-aura);
-  pointer-events:none;
+.entry-card .card-title-row .rating-score[data-rating-tier="perfect"] { font-size:32px; }
+.detail-modal .detail-score.rating-score[data-rating-tier="perfect"] { font-size:62px; }
+#average-rating[data-rating-tier="perfect"] { font-size:41px; }
+.detail-score small { font-weight:400; -webkit-text-stroke:0; text-shadow:none; }
+@media(max-width:620px){
+  .detail-modal .detail-score.rating-score[data-rating-tier="perfect"] { font-size:47px; }
 }

@@ -131,11 +131,15 @@ body.modal-open { overflow:hidden; }
 .game-card,.game-detail { --score-unrated:#aaa59a; }
 [data-rating-tier="perfect"] {
   --rating-color:var(--score-red);
-  --rating-shadow:0 0 3px rgba(184,50,58,.40),0 0 9px rgba(184,50,58,.32),0 0 18px rgba(184,50,58,.20);
+  --rating-shadow:0 1px 2px rgba(184,50,58,.64),0 0 8px rgba(184,50,58,.48),0 0 20px rgba(184,50,58,.30);
+  --rating-aura:radial-gradient(ellipse at center,rgba(184,50,58,.28) 0%,rgba(184,50,58,.15) 38%,rgba(184,50,58,.05) 60%,transparent 76%);
+  --rating-aura-inset:-.55em -.65em;
 }
 [data-rating-tier="gold"] {
   --rating-color:var(--score-gold);
-  --rating-shadow:0 1px 2px rgba(184,146,46,.08),0 0 4px rgba(184,146,46,.06);
+  --rating-shadow:0 1px 2px rgba(184,146,46,.40),0 0 6px rgba(184,146,46,.28),0 0 12px rgba(184,146,46,.16);
+  --rating-aura:radial-gradient(ellipse at center,rgba(184,146,46,.18) 0%,rgba(184,146,46,.09) 36%,rgba(184,146,46,.025) 58%,transparent 74%);
+  --rating-aura-inset:-.35em -.45em;
 }
 [data-rating-tier="orange"] { --rating-color:var(--score-orange); --rating-shadow:none; }
 [data-rating-tier="blue"] { --rating-color:var(--score-blue); --rating-shadow:none; }
@@ -155,3 +159,19 @@ body.modal-open { overflow:hidden; }
 
 /* Keep score size identical across film, album and game cards. */
 .entry-card .card-title-row .rating-score[data-rating-tier] { font-size:28px; line-height:1; }
+
+/* Ambient light is a separate layer behind sharp, opaque score glyphs. */
+.rating-score,
+#average-rating[data-rating-tier] { position:relative; isolation:isolate; }
+.rating-score[data-rating-tier="perfect"]::before,
+.rating-score[data-rating-tier="gold"]::before,
+#average-rating[data-rating-tier="perfect"]::before,
+#average-rating[data-rating-tier="gold"]::before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:var(--rating-aura-inset);
+  border-radius:50%;
+  background:var(--rating-aura);
+  pointer-events:none;
+}

@@ -222,11 +222,10 @@ function renderCard(entry,index){
 }
 
 function render(){
-  const films=entries.filter(e=>e.type==="film");const albums=entries.filter(e=>e.type==="album");const games=entries.filter(e=>e.type==="game");const rated=entries.map(ratingOf).filter(rating=>rating!==null);const average=rated.length?rated.reduce((sum,rating)=>sum+rating,0)/rated.length:null;
-  $("#film-count").textContent=String(films.length).padStart(2,"0");$("#album-count").textContent=String(albums.length).padStart(2,"0");$("#game-count").textContent=String(games.length).padStart(2,"0");$("#average-rating").textContent=average===null?"—":average.toFixed(1);$("#all-tab-count").textContent=entries.length;$("#film-tab-count").textContent=films.length;$("#album-tab-count").textContent=albums.length;$("#game-tab-count").textContent=games.length;
+  const films=entries.filter(e=>e.type==="film");const albums=entries.filter(e=>e.type==="album");const games=entries.filter(e=>e.type==="game");const perfectCount=entries.filter(entry=>ratingOf(entry)===10).length;
+  $("#film-count").textContent=String(films.length).padStart(2,"0");$("#album-count").textContent=String(albums.length).padStart(2,"0");$("#game-count").textContent=String(games.length).padStart(2,"0");$("#perfect-count").textContent=String(perfectCount).padStart(2,"0");$("#all-tab-count").textContent=entries.length;$("#film-tab-count").textContent=films.length;$("#album-tab-count").textContent=albums.length;$("#game-tab-count").textContent=games.length;
   const tokens=normalizeSearch(query).split(/\s+/).filter(Boolean);
   const shown=entries.filter(e=>activeFilter==="all"||e.type===activeFilter).filter(e=>tokens.every(token=>searchText(e).includes(token))).sort((a,b)=>{if(activeSort!=="rating")return b.loggedDate.localeCompare(a.loggedDate);const aRating=ratingOf(a);const bRating=ratingOf(b);if(aRating===null&&bRating===null)return b.loggedDate.localeCompare(a.loggedDate);if(aRating===null)return 1;if(bRating===null)return -1;return bRating-aRating;});
-  $("#average-rating").dataset.ratingTier=ratingTier({rating:average});
   $("#result-count").textContent=`显示 ${shown.length} 条记录`;
   $("#entry-grid").innerHTML=shown.length?shown.map(renderCard).join(""):`<div class="no-results"><span>∅</span><p>${query.trim()?"没有匹配的记录，试试更短的关键词。":"这里还没有记录，点击“新记录”添加。"}</p></div>`;
 }

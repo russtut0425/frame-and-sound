@@ -108,8 +108,7 @@ body.modal-open { overflow:hidden; }
 [data-rating-tier="blue"] { --rating-color:var(--score-blue); }
 [data-rating-tier="unrated"] { --rating-color:var(--score-unrated); }
 .entry-card .card-title-row .rating-score,
-.detail-modal .detail-score.rating-score,
-#average-rating[data-rating-tier] {
+.detail-modal .detail-score.rating-score {
   font-family:Georgia,"Times New Roman",serif;
   font-weight:500;
   font-style:normal;

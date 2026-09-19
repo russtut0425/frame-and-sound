@@ -207,6 +207,12 @@ function gameMetaOf(entry){
   return [gameStatuses[entry.status]||"",String(entry.platform||"").trim(),hours===null?"":`${hours} 小时`].filter(Boolean);
 }
 
+function summaryLabel(value){
+  const text=String(value||"").trim();
+  if(!text)return "";
+  if((text.startsWith("“")&&text.endsWith("”"))||(text.startsWith('"')&&text.endsWith('"')))return "“"+text.slice(1,-1)+"”";
+  return "“"+text+"”";
+}
 function renderCard(entry,index){
   const copy=typeCopy[entry.type]||typeCopy.film;
   const image=imageOf(entry);
@@ -216,7 +222,7 @@ function renderCard(entry,index){
     <div class="card-body">
       <div class="card-title-row"><div><h2>${escapeHTML(entry.title)}</h2><p>${escapeHTML(entry.subtitle||"")}</p></div>${ratingMarkup(entry)}</div>
       <p class="creator">${escapeHTML(entry.creator)}${entry.releaseYear?` · ${escapeHTML(entry.releaseYear)}`:""}</p>
-      <blockquote>${escapeHTML(entry.summary||"")}</blockquote>
+      <blockquote>${escapeHTML(summaryLabel(entry.summary))}</blockquote>
       <div class="tag-row">${tagsOf(entry).slice(0,3).map(tag=>`<span>#${escapeHTML(tag)}</span>`).join("")}</div>
     </div></article>`;
 }
@@ -243,7 +249,7 @@ function setType(type){
 }
 function closeForm(){if(busy)return;formSession++;imageRequest++;hideModal("form");}
 function openDetail(id){
-  const entry=entries.find(item=>item.id===id);if(!entry)return;selectedId=id;const modal=$("#detail-modal");const copy=typeCopy[entry.type]||typeCopy.film;const image=imageOf(entry);const rating=ratingOf(entry);const score=rating===null?'—<small>待评分</small>':`${rating.toFixed(1)}<small>/ 10</small>`;const gameMeta=gameMetaOf(entry);const gameInfo=gameMeta.length?`<div class="detail-game-meta">${gameMeta.map(item=>`<span>${escapeHTML(item)}</span>`).join("")}</div>`:"";modal.style.setProperty("--accent",accents[entry.accent]||accents.red);modal.dataset.ratingTier=ratingTier(entry);modal.classList.toggle("game-detail",entry.type==="game");modal.classList.toggle("album-detail",entry.type==="album");modal.innerHTML=`<button class="close-button" data-close="detail" aria-label="关闭">×</button><span class="type-badge">${copy.detailBadge}</span><div class="detail-score rating-score" data-rating-tier="${ratingTier(entry)}">${score}</div>${image?`<div class="detail-image ${entry.type}"><img src="${escapeHTML(image)}" alt="${escapeHTML(entry.title)}" decoding="async"></div>`:""}<h2 id="detail-title">${escapeHTML(entry.title)}</h2><p class="detail-subtitle">${escapeHTML(entry.subtitle)}</p><p class="creator">${escapeHTML(entry.creator)}${entry.releaseYear?` · ${escapeHTML(entry.releaseYear)}`:""}</p>${gameInfo}<blockquote>“${escapeHTML(entry.summary)}”</blockquote><div class="detail-note"><span>${copy.detailNote}</span><p>${escapeHTML(entry.note||"还没写下更多。").replace(/\n/g,"<br>")}</p></div><div class="detail-bottom"><div class="tag-row">${tagsOf(entry).map(tag=>`<span>#${escapeHTML(tag)}</span>`).join("")}</div><time>${escapeHTML(entry.loggedDate)}</time></div><div class="detail-actions"><button data-action="edit">编辑记录</button><button class="danger" data-action="delete">删除这条记录</button></div>`;showModal("detail",modal.querySelector("button"));
+  const entry=entries.find(item=>item.id===id);if(!entry)return;selectedId=id;const modal=$("#detail-modal");const copy=typeCopy[entry.type]||typeCopy.film;const image=imageOf(entry);const rating=ratingOf(entry);const score=rating===null?'—<small>待评分</small>':`${rating.toFixed(1)}<small>/ 10</small>`;const gameMeta=gameMetaOf(entry);const gameInfo=gameMeta.length?`<div class="detail-game-meta">${gameMeta.map(item=>`<span>${escapeHTML(item)}</span>`).join("")}</div>`:"";modal.style.setProperty("--accent",accents[entry.accent]||accents.red);modal.dataset.ratingTier=ratingTier(entry);modal.classList.toggle("game-detail",entry.type==="game");modal.classList.toggle("album-detail",entry.type==="album");modal.innerHTML=`<button class="close-button" data-close="detail" aria-label="关闭">×</button><span class="type-badge">${copy.detailBadge}</span><div class="detail-score rating-score" data-rating-tier="${ratingTier(entry)}">${score}</div>${image?`<div class="detail-image ${entry.type}"><img src="${escapeHTML(image)}" alt="${escapeHTML(entry.title)}" decoding="async"></div>`:""}<h2 id="detail-title">${escapeHTML(entry.title)}</h2><p class="detail-subtitle">${escapeHTML(entry.subtitle)}</p><p class="creator">${escapeHTML(entry.creator)}${entry.releaseYear?` · ${escapeHTML(entry.releaseYear)}`:""}</p>${gameInfo}<blockquote>${escapeHTML(summaryLabel(entry.summary))}</blockquote><div class="detail-note"><span>${copy.detailNote}</span><p>${escapeHTML(entry.note||"还没写下更多。").replace(/\n/g,"<br>")}</p></div><div class="detail-bottom"><div class="tag-row">${tagsOf(entry).map(tag=>`<span>#${escapeHTML(tag)}</span>`).join("")}</div><time>${escapeHTML(entry.loggedDate)}</time></div><div class="detail-actions"><button data-action="edit">编辑记录</button><button class="danger" data-action="delete">删除这条记录</button></div>`;showModal("detail",modal.querySelector("button"));
 }
 function closeDetail(){hideModal("detail");selectedId=null;}
 

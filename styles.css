@@ -140,8 +140,8 @@ body.modal-open { overflow:hidden; }
 [data-rating-tier="orange"] { --rating-color:var(--score-orange); --rating-shadow:none; }
 [data-rating-tier="blue"] { --rating-color:var(--score-blue); --rating-shadow:none; }
 [data-rating-tier="unrated"] { --rating-color:var(--score-unrated); --rating-shadow:none; }
-.entry-card[data-rating-tier] .card-title-row strong,
-.detail-modal[data-rating-tier] .detail-score,
+.entry-card .card-title-row .rating-score[data-rating-tier],
+.detail-modal .detail-score.rating-score[data-rating-tier],
 #average-rating[data-rating-tier] {
   font-family:Georgia,"Times New Roman",serif;
   font-weight:500;
@@ -154,4 +154,4 @@ body.modal-open { overflow:hidden; }
 .detail-score small { text-shadow:none; }
 
 /* Keep score size identical across film, album and game cards. */
-.entry-card[data-rating-tier] .card-title-row strong { font-size:28px; line-height:1; }
+.entry-card .card-title-row .rating-score[data-rating-tier] { font-size:28px; line-height:1; }

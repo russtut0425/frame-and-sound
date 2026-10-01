@@ -227,29 +227,34 @@ function renderCard(entry,index){
     </div></article>`;
 }
 
+function isWishlist(entry){return (entry.type==="film"||entry.type==="game")&&entry.status==="wishlist";}
+function matchesCollection(entry,filter){return filter==="wishlist"?isWishlist(entry):!isWishlist(entry)&&(filter==="all"||entry.type===filter);}
 function render(){
-  const films=entries.filter(e=>e.type==="film");const albums=entries.filter(e=>e.type==="album");const games=entries.filter(e=>e.type==="game");const perfectCount=entries.filter(entry=>ratingOf(entry)===10).length;
-  $("#film-count").textContent=String(films.length).padStart(2,"0");$("#album-count").textContent=String(albums.length).padStart(2,"0");$("#game-count").textContent=String(games.length).padStart(2,"0");$("#perfect-count").textContent=String(perfectCount).padStart(2,"0");$("#all-tab-count").textContent=entries.length;$("#film-tab-count").textContent=films.length;$("#album-tab-count").textContent=albums.length;$("#game-tab-count").textContent=games.length;
+  const archive=entries.filter(entry=>!isWishlist(entry));const wishlist=entries.filter(isWishlist);const films=archive.filter(e=>e.type==="film");const albums=archive.filter(e=>e.type==="album");const games=archive.filter(e=>e.type==="game");const perfectCount=archive.filter(entry=>ratingOf(entry)===10).length;
+  $("#film-count").textContent=String(films.length).padStart(2,"0");$("#album-count").textContent=String(albums.length).padStart(2,"0");$("#game-count").textContent=String(games.length).padStart(2,"0");$("#perfect-count").textContent=String(perfectCount).padStart(2,"0");$("#all-tab-count").textContent=archive.length;$("#wishlist-tab-count").textContent=wishlist.length;$("#film-tab-count").textContent=films.length;$("#album-tab-count").textContent=albums.length;$("#game-tab-count").textContent=games.length;
   const tokens=normalizeSearch(query).split(/\s+/).filter(Boolean);
-  const shown=entries.filter(e=>activeFilter==="all"||e.type===activeFilter).filter(e=>tokens.every(token=>searchText(e).includes(token))).sort((a,b)=>{if(activeSort!=="rating")return b.loggedDate.localeCompare(a.loggedDate);const aRating=ratingOf(a);const bRating=ratingOf(b);if(aRating===null&&bRating===null)return b.loggedDate.localeCompare(a.loggedDate);if(aRating===null)return 1;if(bRating===null)return -1;return bRating-aRating;});
+  const shown=entries.filter(e=>matchesCollection(e,activeFilter)).filter(e=>tokens.every(token=>searchText(e).includes(token))).sort((a,b)=>{if(activeSort!=="rating")return b.loggedDate.localeCompare(a.loggedDate);const aRating=ratingOf(a);const bRating=ratingOf(b);if(aRating===null&&bRating===null)return b.loggedDate.localeCompare(a.loggedDate);if(aRating===null)return 1;if(bRating===null)return -1;return bRating-aRating;});
   $("#result-count").textContent=`显示 ${shown.length} 条记录`;
-  $("#entry-grid").innerHTML=shown.length?shown.map(renderCard).join(""):`<div class="no-results"><span>∅</span><p>${query.trim()?"没有匹配的记录，试试更短的关键词。":"这里还没有记录，点击“新记录”添加。"}</p></div>`;
+  $("#entry-grid").innerHTML=shown.length?shown.map(renderCard).join(""):`<div class="no-results"><span>∅</span><p>${query.trim()?"没有匹配的记录，试试更短的关键词。":activeFilter==="wishlist"?"还没有想看或想玩的作品，点击“新记录”添加。":"这里还没有记录，点击“新记录”添加。"}</p></div>`;
 }
 
 function openForm(entry=null){
   if(busy){notify("正在保存，请稍候");return;}formSession++;imageRequest++;editingEntry=entry;
   const form=$("#entry-form");form.reset();form.elements.loggedDate.value=localDate();form.elements.rating.value="";form.elements.status.value="";$("#save-button").disabled=false;form.elements.type.value="film";form.elements.id.value="";pendingImage=typeof entry?.image==="string"?entry.image:"";$("#entry-image").value="";updateImagePreview();
   if(entry){Object.entries(entry).forEach(([key,value])=>{if(form.elements[key]){if(form.elements[key].type==="checkbox")form.elements[key].checked=Boolean(value);else form.elements[key].value=value??"";}});$("#form-eyebrow").textContent="EDIT THE MEMORY";$("#form-title").textContent="记忆变了，就改掉。";$("#save-button").textContent="保存修改";}else{$("#form-eyebrow").textContent="ADD TO THE ARCHIVE";$("#form-title").textContent="刚看完，还是后来想起？";$("#save-button").textContent="收进档案";}
+  form.elements.filmStatus.value=entry?.type==="film"&&isWishlist(entry)?"wishlist":"";
+  if(!entry&&activeFilter==="wishlist"){form.elements.filmStatus.value="wishlist";form.elements.status.value="wishlist";}
   setType(form.elements.type.value);$("#form-error").classList.add("hidden");showModal("form",form.elements.title);
 }
 function setType(type){
   $("#image-preview").classList.toggle("album-preview",type==="album");
+  $(".film-status-field").classList.toggle("hidden",type!=="film");
   const copy=typeCopy[type]||typeCopy.film;$("#entry-form").elements.type.value=type;$$('[data-type]').forEach(button=>button.classList.toggle("active",button.dataset.type===type));$$(".game-only").forEach(field=>field.classList.toggle("hidden",type!=="game"));$("#creator-label").textContent=copy.creator;$("#image-field-label").textContent=copy.image;$("#summary-label").textContent=copy.summary;$("#note-label").textContent=copy.note;$("#favorite-label").textContent=copy.favorite;
 
 }
 function closeForm(){if(busy)return;formSession++;imageRequest++;hideModal("form");}
 function openDetail(id){
-  const entry=entries.find(item=>item.id===id);if(!entry)return;selectedId=id;const modal=$("#detail-modal");const copy=typeCopy[entry.type]||typeCopy.film;const image=imageOf(entry);const rating=ratingOf(entry);const score=rating===null?'—<small>待评分</small>':`${rating.toFixed(1)}<small>/ 10</small>`;const gameMeta=gameMetaOf(entry);const gameInfo=gameMeta.length?`<div class="detail-game-meta">${gameMeta.map(item=>`<span>${escapeHTML(item)}</span>`).join("")}</div>`:"";modal.style.setProperty("--accent",accents[entry.accent]||accents.red);modal.dataset.ratingTier=ratingTier(entry);modal.classList.toggle("game-detail",entry.type==="game");modal.classList.toggle("album-detail",entry.type==="album");modal.innerHTML=`<button class="close-button" data-close="detail" aria-label="关闭">×</button><span class="type-badge">${copy.detailBadge}</span><div class="detail-score rating-score" data-rating-tier="${ratingTier(entry)}">${score}</div>${image?`<div class="detail-image ${entry.type}"><img src="${escapeHTML(image)}" alt="${escapeHTML(entry.title)}" decoding="async"></div>`:""}<h2 id="detail-title">${escapeHTML(entry.title)}</h2><p class="detail-subtitle">${escapeHTML(entry.subtitle)}</p><p class="creator">${escapeHTML(entry.creator)}${entry.releaseYear?` · ${escapeHTML(entry.releaseYear)}`:""}</p>${gameInfo}<blockquote>${escapeHTML(summaryLabel(entry.summary))}</blockquote><div class="detail-note"><span>${copy.detailNote}</span><p>${escapeHTML(entry.note||"还没写下更多。").replace(/\n/g,"<br>")}</p></div><div class="detail-bottom"><div class="tag-row">${tagsOf(entry).map(tag=>`<span>#${escapeHTML(tag)}</span>`).join("")}</div><time>${escapeHTML(entry.loggedDate)}</time></div><div class="detail-actions"><button data-action="edit">编辑记录</button><button class="danger" data-action="delete">删除这条记录</button></div>`;showModal("detail",modal.querySelector("button"));
+  const entry=entries.find(item=>item.id===id);if(!entry)return;selectedId=id;const modal=$("#detail-modal");const copy=typeCopy[entry.type]||typeCopy.film;const image=imageOf(entry);const rating=ratingOf(entry);const score=rating===null?'—<small>待评分</small>':`${rating.toFixed(1)}<small>/ 10</small>`;const gameMeta=gameMetaOf(entry);const gameInfo=entry.type==="film"&&isWishlist(entry)?'<div class="detail-game-meta"><span>想看</span></div>':gameMeta.length?`<div class="detail-game-meta">${gameMeta.map(item=>`<span>${escapeHTML(item)}</span>`).join("")}</div>`:"";modal.style.setProperty("--accent",accents[entry.accent]||accents.red);modal.dataset.ratingTier=ratingTier(entry);modal.classList.toggle("game-detail",entry.type==="game");modal.classList.toggle("album-detail",entry.type==="album");modal.innerHTML=`<button class="close-button" data-close="detail" aria-label="关闭">×</button><span class="type-badge">${copy.detailBadge}</span><div class="detail-score rating-score" data-rating-tier="${ratingTier(entry)}">${score}</div>${image?`<div class="detail-image ${entry.type}"><img src="${escapeHTML(image)}" alt="${escapeHTML(entry.title)}" decoding="async"></div>`:""}<h2 id="detail-title">${escapeHTML(entry.title)}</h2><p class="detail-subtitle">${escapeHTML(entry.subtitle)}</p><p class="creator">${escapeHTML(entry.creator)}${entry.releaseYear?` · ${escapeHTML(entry.releaseYear)}`:""}</p>${gameInfo}<blockquote>${escapeHTML(summaryLabel(entry.summary))}</blockquote><div class="detail-note"><span>${copy.detailNote}</span><p>${escapeHTML(entry.note||"还没写下更多。").replace(/\n/g,"<br>")}</p></div><div class="detail-bottom"><div class="tag-row">${tagsOf(entry).map(tag=>`<span>#${escapeHTML(tag)}</span>`).join("")}</div><time>${escapeHTML(entry.loggedDate)}</time></div><div class="detail-actions">${isWishlist(entry)?'<button data-action="archive">移入作品记录</button>':""}<button data-action="edit">编辑记录</button><button class="danger" data-action="delete">删除这条记录</button></div>`;showModal("detail",modal.querySelector("button"));
 }
 function closeDetail(){hideModal("detail");selectedId=null;}
 
@@ -259,7 +264,7 @@ $("#entry-form").addEventListener("submit",event=>{
   const id=Number(form.get("id"))||Math.max(Date.now(),...entries.map(e=>e.id+1));const existing=entries.find(e=>e.id===id);
   let entry;
   try{entry=normalizeEntries([{id,type,...Object.fromEntries(["title","subtitle","creator","releaseYear","rating","loggedDate","summary","note","tags"].map(key=>[key,String(form.get(key)||"").trim()])),
-    platform:type==="game"?String(form.get("platform")||"").trim():"",status:type==="game"?String(form.get("status")||""):"",hours:type==="game"?String(form.get("hours")||""):"",
+    platform:type==="game"?String(form.get("platform")||"").trim():"",status:type==="game"?String(form.get("status")||""):type==="film"?String(form.get("filmStatus")||""):"",hours:type==="game"?String(form.get("hours")||""):"",
     favorite:form.get("favorite")==="on",accent:existing?.accent||accentNames[Math.floor(Math.random()*accentNames.length)],image:pendingImage,coverKey:existing?.coverKey}])[0];
   }catch{const error=$("#form-error");error.textContent="请检查作品名、创作者、日期和年份；评分为 0—10，时长不能为负，均可留空。";error.classList.remove("hidden");return;}
   runStorageTask(async()=>{
@@ -280,6 +285,10 @@ $("#entry-grid").addEventListener("keydown",event=>{if(event.key==="Enter"||even
 $("#detail-modal").addEventListener("click",event=>{
   const action=event.target.dataset.action;if(event.target.dataset.close)closeDetail();
   if(action==="edit"&&!busy){const entry=entries.find(item=>item.id===selectedId);closeDetail();openForm(entry);}
+  if(action==="archive"&&!busy){const entry=entries.find(item=>item.id===selectedId);if(entry&&isWishlist(entry))runStorageTask(async()=>{
+    await commitEntries(entries.map(item=>({...item,...(item.id===entry.id?{status:""}:{})})));
+    render();if(selectedId===entry.id)openDetail(entry.id);notify("已移入作品记录，可编辑评分和感想");
+  });}
   if(action==="delete"&&!busy){const entry=entries.find(item=>item.id===selectedId);if(entry&&confirm(`删除《${entry.title}》这条记录？`))runStorageTask(async()=>{await commitEntries(entries.filter(item=>item.id!==entry.id).map(e=>({...e})));render();if(selectedId===entry.id)closeDetail();notify("已经删除");});}
 });
 $("#add-entry").addEventListener("click",()=>openForm());
@@ -292,7 +301,7 @@ $$('[data-filter]').forEach(button=>button.addEventListener("click",()=>{
 }));
 const searchCache=new WeakMap();
 function normalizeSearch(value){return String(value||"").normalize("NFKC").toLowerCase().trim();}
-function searchText(entry){if(!searchCache.has(entry))searchCache.set(entry,normalizeSearch([entry.title,entry.subtitle,entry.creator,entry.tags,entry.summary,entry.note,entry.platform,gameStatuses[entry.status]].join(" ")));return searchCache.get(entry);}
+function searchText(entry){if(!searchCache.has(entry))searchCache.set(entry,normalizeSearch([entry.title,entry.subtitle,entry.creator,entry.tags,entry.summary,entry.note,entry.platform,entry.type==="film"&&isWishlist(entry)?"想看":gameStatuses[entry.status]].join(" ")));return searchCache.get(entry);}
 let searchTimer;
 function scheduleSearch(event){query=event.target.value;clearTimeout(searchTimer);if(!event.isComposing)searchTimer=setTimeout(render,120);}
 $("#search").addEventListener("input",scheduleSearch);$("#search").addEventListener("compositionend",scheduleSearch);

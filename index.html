@@ -27,7 +27,7 @@
   </section>
 
   <section class="collection">
-    <div class="collection-head"><div class="tabs" role="group" aria-label="记录类型"><button data-filter="all" aria-pressed="true" class="active">全部 <small id="all-tab-count">0</small></button><button data-filter="film" aria-pressed="false">电影 <small id="film-tab-count">0</small></button><button data-filter="album" aria-pressed="false">专辑 <small id="album-tab-count">0</small></button><button data-filter="game" aria-pressed="false">游戏 <small id="game-tab-count">0</small></button></div><button class="sort-button" id="sort-button">最近记录 ↓</button></div>
+    <div class="collection-head"><div class="tabs" role="group" aria-label="记录类型"><button data-filter="all" aria-pressed="true" class="active">全部 <small id="all-tab-count">0</small></button><button data-filter="film" aria-pressed="false">电影 <small id="film-tab-count">0</small></button><button data-filter="album" aria-pressed="false">专辑 <small id="album-tab-count">0</small></button><button data-filter="game" aria-pressed="false">游戏 <small id="game-tab-count">0</small></button><button data-filter="wishlist" aria-pressed="false">想看 / 想玩 <small id="wishlist-tab-count">0</small></button></div><button class="sort-button" id="sort-button">最近记录 ↓</button></div>
     <p id="storage-warning" class="field-error hidden" role="alert"></p>
     <p id="result-count" class="result-count" role="status" aria-live="polite"></p>
     <div class="entry-grid" id="entry-grid"></div>
@@ -60,6 +60,7 @@
           <label>年份<input name="releaseYear" type="number" min="0" max="9999" step="1" inputmode="numeric" placeholder="2001"></label>
           <label>评分（可选）<input name="rating" type="number" min="0" max="10" step="0.1" placeholder="暂不评分"></label>
           <label>记录日期<input required name="loggedDate" type="date"></label>
+          <label class="film-status-field">记录类别<select name="filmStatus"><option value="">作品记录</option><option value="wishlist">想看</option></select></label>
           <label class="game-only hidden">平台<input name="platform" placeholder="PC / PS5 / Switch"></label>
           <label class="game-only hidden">游玩状态<select name="status"><option value="" selected>暂不填写</option><option value="wishlist">想玩</option><option value="playing">正在玩</option><option value="finished">已通关</option><option value="paused">暂停</option><option value="dropped">弃坑</option></select></label>
           <label class="game-only hidden">时长（小时）<input name="hours" type="number" min="0" step="0.5" placeholder="可留空"></label>
@@ -83,6 +84,6 @@
 <script src="album-covers.js?v=3"></script>
 <script src="game-seeds.js?v=2"></script>
 <script src="game-covers.js?v=2"></script>
-<script src="app.js?v=20"></script>
+<script src="app.js?v=21"></script>
 </body>
 </html>

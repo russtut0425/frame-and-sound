@@ -16,20 +16,19 @@ window.filmSeedEntries = [
     image: ""
   },
   {
-    "id": 30002,
-    "type": "film",
-    "title": "诗",
-    "subtitle": "시 / Poetry",
-    "creator": "李沧东",
-    "releaseYear": 2010,
-    "rating": null,
-    "loggedDate": "2026-09-10",
-    "summary": "一位学习写诗的老人，在记忆衰退与家庭秘密之间重新审视身边的世界。",
-    "note": "",
-    "tags": "韩国,诗歌,记忆,伦理",
-    "favorite": false,
-    "accent": "green",
-    "image": ""
+    id: 30002,
+    type: "film",
+    title: "诗",
+    subtitle: "시 / Poetry",
+    creator: "李沧东",
+    releaseYear: 2010,
+    rating: null,
+    loggedDate: "2026-09-10",
+    note: "",
+    tags: "韩国,诗歌,记忆,伦理",
+    favorite: false,
+    accent: "green",
+    image: ""
   }
 ];
 
@@ -50,3 +49,74 @@ window.filmSeedEntries.push({
   "accent": "red",
   "image": ""
 });
+
+window.filmSeedEntries.push(
+  {
+    "id": 30004,
+    "type": "film",
+    "title": "绿鱼",
+    "subtitle": "초록물고기 / Green Fish",
+    "creator": "李沧东",
+    "releaseYear": 1997,
+    "rating": null,
+    "loggedDate": "2026-10-02",
+    "status": "wishlist",
+    "summary": "一个退伍青年卷入黑帮世界，在城市变化中寻找自己的位置。",
+    "note": "李沧东长片处女作。",
+    "tags": "韩国,社会,黑帮",
+    "favorite": false,
+    "accent": "green",
+    "image": ""
+  },
+  {
+    "id": 30005,
+    "type": "film",
+    "title": "薄荷糖",
+    "subtitle": "박하사탕 / Peppermint Candy",
+    "creator": "李沧东",
+    "releaseYear": 2000,
+    "rating": null,
+    "loggedDate": "2026-10-02",
+    "status": "wishlist",
+    "summary": "一个男人在生命终点回望自己被时代逐渐改变的一生。",
+    "note": "",
+    "tags": "韩国,时间,记忆,时代",
+    "favorite": false,
+    "accent": "green",
+    "image": ""
+  },
+  {
+    "id": 30006,
+    "type": "film",
+    "title": "绿洲",
+    "subtitle": "오아시스 / Oasis",
+    "creator": "李沧东",
+    "releaseYear": 2002,
+    "rating": null,
+    "loggedDate": "2026-10-02",
+    "status": "wishlist",
+    "summary": "两个被社会边缘化的人，在误解与排斥中寻找彼此。",
+    "note": "",
+    "tags": "韩国,爱情,边缘人",
+    "favorite": false,
+    "accent": "green",
+    "image": ""
+  },
+  {
+    "id": 30007,
+    "type": "film",
+    "title": "密阳",
+    "subtitle": "밀양 / Secret Sunshine",
+    "creator": "李沧东",
+    "releaseYear": 2007,
+    "rating": null,
+    "loggedDate": "2026-10-02",
+    "status": "wishlist",
+    "summary": "一名失去至亲的女性，在痛苦、信仰与宽恕之间寻找出口。",
+    "note": "",
+    "tags": "韩国,信仰,痛苦,救赎",
+    "favorite": false,
+    "accent": "green",
+    "image": ""
+  }
+);

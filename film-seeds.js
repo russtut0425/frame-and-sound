@@ -32,3 +32,21 @@ window.filmSeedEntries = [
     "image": ""
   }
 ];
+
+window.filmSeedEntries.push({
+  "id": 30003,
+  "type": "film",
+  "title": "空房间",
+  "subtitle": "3-Iron",
+  "creator": "金基德",
+  "releaseYear": 2004,
+  "rating": null,
+  "loggedDate": "2026-10-01",
+  "status": "wishlist",
+  "summary": "一个借住空屋的青年，与一位沉默的女人结伴进入陌生人的生活。",
+  "note": "",
+  "tags": "韩国,爱情,沉默",
+  "favorite": false,
+  "accent": "red",
+  "image": ""
+});

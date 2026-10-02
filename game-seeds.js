@@ -72,3 +72,44 @@ window.gameSeedEntries.push({
   "status": "finished",
   "hours": 7
 });
+
+window.gameSeedEntries.push(...[
+  {
+    "type": "game",
+    "releaseYear": 2023,
+    "rating": null,
+    "loggedDate": "2026-10-03",
+    "note": "",
+    "favorite": false,
+    "accent": "red",
+    "image": "",
+    "platform": "",
+    "status": "wishlist",
+    "hours": null,
+    "id": 20034,
+    "title": "生化危机4",
+    "subtitle": "Resident Evil 4 (2023)",
+    "creator": "CAPCOM",
+    "summary": "里昂前往欧洲村落营救总统的女儿，在邪教与寄生体的围困中求生。",
+    "tags": "生存恐怖,第三人称射击,重制"
+  },
+  {
+    "type": "game",
+    "releaseYear": 2023,
+    "rating": null,
+    "loggedDate": "2026-10-03",
+    "note": "",
+    "favorite": false,
+    "accent": "red",
+    "image": "",
+    "platform": "",
+    "status": "wishlist",
+    "hours": null,
+    "id": 20035,
+    "title": "塔罗斯的法则2",
+    "subtitle": "The Talos Principle 2",
+    "creator": "Croteam",
+    "summary": "在人类消失后的机器人文明中，探索谜题、巨构与关于存在的哲学问题。",
+    "tags": "解谜,哲学,科幻"
+  }
+]);
